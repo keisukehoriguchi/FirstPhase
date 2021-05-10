@@ -13,6 +13,11 @@
 		04633FBD26479CD500BE576F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04633FBC26479CD500BE576F /* Preview Assets.xcassets */; };
 		04633FC826479CD600BE576F /* FirstPhaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FC726479CD600BE576F /* FirstPhaseTests.swift */; };
 		04633FD326479CD600BE576F /* FirstPhaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FD226479CD600BE576F /* FirstPhaseUITests.swift */; };
+		0497AA4C2648FB30000082CE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA4B2648FB30000082CE /* MainTabView.swift */; };
+		0497AA4E26490001000082CE /* TweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA4D26490001000082CE /* TweetView.swift */; };
+		0497AA5126490050000082CE /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA5026490050000082CE /* PracticeView.swift */; };
+		0497AA532649005D000082CE /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA522649005D000082CE /* ResultView.swift */; };
+		0497AA552649006B000082CE /* SettingOtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA542649006B000082CE /* SettingOtherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		04633FCE26479CD600BE576F /* FirstPhaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstPhaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04633FD226479CD600BE576F /* FirstPhaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPhaseUITests.swift; sourceTree = "<group>"; };
 		04633FD426479CD600BE576F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0497AA4B2648FB30000082CE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		0497AA4D26490001000082CE /* TweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetView.swift; sourceTree = "<group>"; };
+		0497AA5026490050000082CE /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		0497AA522649005D000082CE /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		0497AA542649006B000082CE /* SettingOtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOtherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 			children = (
 				04633FB526479CD400BE576F /* FirstPhaseApp.swift */,
 				04633FB726479CD400BE576F /* ContentView.swift */,
+				0497AA4F2649002E000082CE /* View */,
 				04633FB926479CD500BE576F /* Assets.xcassets */,
 				04633FBE26479CD500BE576F /* Info.plist */,
 				04633FBB26479CD500BE576F /* Preview Content */,
@@ -128,6 +139,18 @@
 				04633FD426479CD600BE576F /* Info.plist */,
 			);
 			path = FirstPhaseUITests;
+			sourceTree = "<group>";
+		};
+		0497AA4F2649002E000082CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0497AA4B2648FB30000082CE /* MainTabView.swift */,
+				0497AA4D26490001000082CE /* TweetView.swift */,
+				0497AA5026490050000082CE /* PracticeView.swift */,
+				0497AA522649005D000082CE /* ResultView.swift */,
+				0497AA542649006B000082CE /* SettingOtherView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +283,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04633FB826479CD400BE576F /* ContentView.swift in Sources */,
+				0497AA5126490050000082CE /* PracticeView.swift in Sources */,
 				04633FB626479CD400BE576F /* FirstPhaseApp.swift in Sources */,
+				0497AA552649006B000082CE /* SettingOtherView.swift in Sources */,
+				0497AA4E26490001000082CE /* TweetView.swift in Sources */,
+				0497AA4C2648FB30000082CE /* MainTabView.swift in Sources */,
+				0497AA532649005D000082CE /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
