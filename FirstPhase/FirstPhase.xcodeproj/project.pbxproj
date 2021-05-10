@@ -14,6 +14,7 @@
 		04633FC826479CD600BE576F /* FirstPhaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FC726479CD600BE576F /* FirstPhaseTests.swift */; };
 		04633FD326479CD600BE576F /* FirstPhaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FD226479CD600BE576F /* FirstPhaseUITests.swift */; };
 		0474A59D264923A700D98E8E /* OneTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A59C264923A700D98E8E /* OneTweetView.swift */; };
+		0474A59F2649332200D98E8E /* OnePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A59E2649332200D98E8E /* OnePracticeView.swift */; };
 		0497AA4C2648FB30000082CE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA4B2648FB30000082CE /* MainTabView.swift */; };
 		0497AA4E26490001000082CE /* TweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA4D26490001000082CE /* TweetView.swift */; };
 		0497AA5126490050000082CE /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA5026490050000082CE /* PracticeView.swift */; };
@@ -52,6 +53,7 @@
 		04633FD226479CD600BE576F /* FirstPhaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPhaseUITests.swift; sourceTree = "<group>"; };
 		04633FD426479CD600BE576F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0474A59C264923A700D98E8E /* OneTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTweetView.swift; sourceTree = "<group>"; };
+		0474A59E2649332200D98E8E /* OnePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePracticeView.swift; sourceTree = "<group>"; };
 		0497AA4B2648FB30000082CE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		0497AA4D26490001000082CE /* TweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetView.swift; sourceTree = "<group>"; };
 		0497AA5026490050000082CE /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				0474A59C264923A700D98E8E /* OneTweetView.swift */,
+				0474A59E2649332200D98E8E /* OnePracticeView.swift */,
 			);
 			path = ViewParts;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				0497AA5126490050000082CE /* PracticeView.swift in Sources */,
 				0474A59D264923A700D98E8E /* OneTweetView.swift in Sources */,
 				04633FB626479CD400BE576F /* FirstPhaseApp.swift in Sources */,
+				0474A59F2649332200D98E8E /* OnePracticeView.swift in Sources */,
 				0497AA552649006B000082CE /* SettingOtherView.swift in Sources */,
 				0497AA4E26490001000082CE /* TweetView.swift in Sources */,
 				0497AA4C2648FB30000082CE /* MainTabView.swift in Sources */,
