@@ -9,7 +9,18 @@ import SwiftUI
 
 struct SettingOtherView: View {
     var body: some View {
-        Text("Setting")
+        List {
+            Section(header: Text("Setting")) {
+                Label("Profile", systemImage: "")
+                Label("Profile", systemImage: "")
+            }
+            
+            Section(header: Text("Other")) {
+                Label("Profile", systemImage: "")
+                Label("Profile", systemImage: "")
+            }
+            
+        }
     }
 }
 

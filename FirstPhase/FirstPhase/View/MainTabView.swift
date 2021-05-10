@@ -12,10 +12,35 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            TweetView().tabItem { Image(systemName: "moon") }.tag(1)
-            PracticeView().tabItem { Image(systemName: "moon") }.tag(2)
-            ResultView().tabItem { Image(systemName: "moon") }.tag(3)
-            SettingOtherView().tabItem { Image(systemName: "moon") }.tag(4)
+            
+            TweetView().tabItem {
+                VStack{
+                    Image(systemName: "exclamationmark.bubble")
+                    Text("Tweet")
+                }
+            }.tag(1)
+            
+            PracticeView().tabItem {
+                VStack{
+                    Image(systemName: "pencil.and.outline")
+                    Text("Practice")
+                }
+            }.tag(2)
+            
+            ResultView().tabItem {
+                VStack{
+                    Image(systemName: "scroll")
+                    Text("Result")
+                }
+            }.tag(3)
+            
+            SettingOtherView().tabItem {
+                VStack{
+                    Image(systemName: "gear")
+                    Text("Setting")
+                }
+            }.tag(4)
+            
         }
     }
 }
