@@ -31,7 +31,7 @@ struct OneTweetView: View {
                     }
                     .frame(width: geometry.size.width*0.8)
                     .padding(.all, 5)
-                    .background(Color(#colorLiteral(red: 0.9155651927, green: 0.9101226926, blue: 0.9197488427, alpha: 1)))
+                    .background(Color(#colorLiteral(red: 0.934886694, green: 0.9293292165, blue: 0.9391586781, alpha: 1)))
                     .cornerRadius(15)
                 }
                 
@@ -53,9 +53,9 @@ struct OneTweetView: View {
             }
             .padding(.all, 10)
             .frame(width: geometry.size.width, alignment: .leading)
-            .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
+            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
             .cornerRadius(15)
-            .shadow(color: .gray, radius: 3, x: 5, y: 5)
+            .shadow(color: .gray, radius: 3)
         }
         
     }

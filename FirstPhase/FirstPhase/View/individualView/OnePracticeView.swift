@@ -30,7 +30,7 @@ struct OnePracticeView: View {
             }
             .padding(5)
             .frame(width: geometry.size.width)
-            .background(Color(#colorLiteral(red: 0.9110545516, green: 0.9056388736, blue: 0.915217638, alpha: 1)))
+            .background(Color(#colorLiteral(red: 0.9852560163, green: 0.9898150563, blue: 1, alpha: 1)))
             .cornerRadius(15)
             .shadow(radius: 5)
         }
