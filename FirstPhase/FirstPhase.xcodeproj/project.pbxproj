@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041A0DB5264B8D8900B92738 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0DB4264B8D8900B92738 /* DateItem.swift */; };
 		04633FB626479CD400BE576F /* FirstPhaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FB526479CD400BE576F /* FirstPhaseApp.swift */; };
 		04633FB826479CD400BE576F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FB726479CD400BE576F /* ContentView.swift */; };
 		04633FBA26479CD500BE576F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04633FB926479CD500BE576F /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041A0DB4264B8D8900B92738 /* DateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
 		04633FB226479CD400BE576F /* FirstPhase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstPhase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04633FB526479CD400BE576F /* FirstPhaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPhaseApp.swift; sourceTree = "<group>"; };
 		04633FB726479CD400BE576F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				04C4F35F264A7D070045C71F /* CalendarLogic.swift */,
+				041A0DB4264B8D8900B92738 /* DateItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				0497AA4E26490001000082CE /* TweetView.swift in Sources */,
 				04C4F35E264A74BD0045C71F /* ResultCalendarView.swift in Sources */,
 				0497AA4C2648FB30000082CE /* MainTabView.swift in Sources */,
+				041A0DB5264B8D8900B92738 /* DateItem.swift in Sources */,
 				0497AA532649005D000082CE /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
