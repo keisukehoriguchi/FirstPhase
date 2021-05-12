@@ -74,7 +74,7 @@ extension CalendarLogic {
     private func alignmentOfDays(_ firstDayOfWeek: Int, _ numberOfCells: Int, _ days: Int) -> [Int] {
         var daysArray: [Int] = []
         var dayCount = 0
-        for i in 0 ... numberOfCells {
+        for i in 0 ..< numberOfCells {
             let diff = i - firstDayOfWeek
             if diff < 0 || dayCount >= days {
                 daysArray.append(0)
