@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResultByCalendar: View {
     var body: some View {
-        ResultCalendarViewPart()
+        ResultCalendarViewParts()
     }
 }
 

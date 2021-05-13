@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ResultGraphViewPart: Shape {
+struct ResultGraphViewParts: Shape {
     
     func path(in rect: CGRect) -> Path {
         let points = [
@@ -34,7 +34,7 @@ struct ResultGraphViewPart: Shape {
 
 struct ResultGraphViewPart_Previews: PreviewProvider {
     static var previews: some View {
-        ResultGraphViewPart()
+        ResultGraphViewParts()
             .fill(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom))
             .shadow(color: .gray, radius: 5, x: 2.0, y: -10)
     }
