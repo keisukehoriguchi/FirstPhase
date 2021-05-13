@@ -10,6 +10,8 @@ import SwiftUI
 struct ResultByGraph: View {
     var body: some View {
         ResultGraphViewPart()
+            .fill(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom))
+            .shadow(color: .gray, radius: 5, x: 2.0, y: -10)
     }
 }
 

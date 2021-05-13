@@ -16,6 +16,7 @@
 		04633FD326479CD600BE576F /* FirstPhaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FD226479CD600BE576F /* FirstPhaseUITests.swift */; };
 		0474A59D264923A700D98E8E /* OneTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A59C264923A700D98E8E /* OneTweetView.swift */; };
 		0474A59F2649332200D98E8E /* OnePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A59E2649332200D98E8E /* OnePracticeView.swift */; };
+		0488F07F264CBAC800476C97 /* WeekCalendarViewPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488F07E264CBAC800476C97 /* WeekCalendarViewPart.swift */; };
 		0489B59C264A23A800BB0DD9 /* ResultByGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489B59B264A23A800BB0DD9 /* ResultByGraph.swift */; };
 		0489B59E264A23BA00BB0DD9 /* ResultByCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489B59D264A23BA00BB0DD9 /* ResultByCalendar.swift */; };
 		0489B5A1264A25A300BB0DD9 /* ResultGraphViewPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489B5A0264A25A300BB0DD9 /* ResultGraphViewPart.swift */; };
@@ -62,6 +63,7 @@
 		04633FD426479CD600BE576F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0474A59C264923A700D98E8E /* OneTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTweetView.swift; sourceTree = "<group>"; };
 		0474A59E2649332200D98E8E /* OnePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePracticeView.swift; sourceTree = "<group>"; };
+		0488F07E264CBAC800476C97 /* WeekCalendarViewPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendarViewPart.swift; sourceTree = "<group>"; };
 		0489B59B264A23A800BB0DD9 /* ResultByGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultByGraph.swift; sourceTree = "<group>"; };
 		0489B59D264A23BA00BB0DD9 /* ResultByCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultByCalendar.swift; sourceTree = "<group>"; };
 		0489B5A0264A25A300BB0DD9 /* ResultGraphViewPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultGraphViewPart.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				0489B5A0264A25A300BB0DD9 /* ResultGraphViewPart.swift */,
 				04C4F35D264A74BD0045C71F /* ResultCalendarView.swift */,
+				0488F07E264CBAC800476C97 /* WeekCalendarViewPart.swift */,
 			);
 			path = ViewParts;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				04633FB626479CD400BE576F /* FirstPhaseApp.swift in Sources */,
 				0474A59F2649332200D98E8E /* OnePracticeView.swift in Sources */,
 				0489B5A1264A25A300BB0DD9 /* ResultGraphViewPart.swift in Sources */,
+				0488F07F264CBAC800476C97 /* WeekCalendarViewPart.swift in Sources */,
 				04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */,
 				0497AA552649006B000082CE /* SettingOtherView.swift in Sources */,
 				0489B59C264A23A800BB0DD9 /* ResultByGraph.swift in Sources */,

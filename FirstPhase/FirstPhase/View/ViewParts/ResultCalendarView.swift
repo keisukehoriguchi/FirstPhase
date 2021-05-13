@@ -18,22 +18,14 @@ struct ResultCalendarViewPart: View {
                 HStack {
                     Text("Month")
                 }
-//                HStack {
-//                    ForEach(dayOfWeekLabel, id: \.self) { dayOfWeek in
-//                        Text(dayOfWeek)
-//                    }
-//                }
+                HStack {
+                    ForEach(dayOfWeekLabel, id: \.self) { dayOfWeek in
+                        Text(dayOfWeek)
+                    }
+                }
                 .frame(width: geometry.size.width)
                 ForEach(0..<(calendarViewModel.calendarArray.count/7), id: \.self) { week in
-                        HStack{
-                            Text(String(calendarViewModel.calendarArray[7*week+0]))
-                            Text(String(calendarViewModel.calendarArray[7*week+1]))
-                            Text(String(calendarViewModel.calendarArray[7*week+2]))
-                            Text(String(calendarViewModel.calendarArray[7*week+3]))
-                            
-                            //Viewの数的に設定上限突破してるらしい。
-                            Text(String(calendarViewModel.calendarArray[7*week+3]))
-                        }
+                    WeekCalendarViewPart(sundayDay: calendarViewModel.calendarArray[7*week+0], mondayDay: calendarViewModel.calendarArray[7*week+1], tuesdayDay: calendarViewModel.calendarArray[7*week+2], wednesdayDay: calendarViewModel.calendarArray[7*week+3], thursdayDay: calendarViewModel.calendarArray[7*week+4], fridayDay: calendarViewModel.calendarArray[7*week+5], saturdayDay: calendarViewModel.calendarArray[7*week+6])
                     }
             }
         }
