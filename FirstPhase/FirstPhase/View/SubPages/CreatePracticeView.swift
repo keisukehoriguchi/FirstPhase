@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CreatePracticeView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
     @State var practiceName: String = ""
     @State var categoryName: String = ""
     @State var reminderIsOn: Bool = false
@@ -29,7 +31,7 @@ struct CreatePracticeView: View {
                 
                 HStack(alignment: .center) {
                     Button(action: {
-                        
+                        self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Cancel")
                     })

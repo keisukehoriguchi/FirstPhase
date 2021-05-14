@@ -8,38 +8,41 @@
 import SwiftUI
 
 struct OnePracticeView: View {
+    
+    @State var practice: Practice
+    
     var body: some View {
-        
-        GeometryReader{ geometry in
-            HStack{
-                Image(systemName: "moon")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.blue)
-                VStack{
-                    Text("Practice")
-                        .font(.title)
-                    Text("Category")
-                }
-                .padding()
-                
-                Image(systemName: "pencil")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.blue)
+        HStack{
+            Spacer()
+            Image(systemName: "moon")
+                .resizable()
+                .frame(width: 30, height: 30)
+                .foregroundColor(.blue)
+            Spacer()
+            VStack{
+                Text(practice.name)
+                    .font(.title)
+                Text(practice.practiceCategory.rawValue)
             }
-            .padding(5)
-            .frame(width: geometry.size.width)
-            .background(Color(#colorLiteral(red: 0.9852560163, green: 0.9898150563, blue: 1, alpha: 1)))
-            .cornerRadius(15)
-            .shadow(radius: 5)
+            .padding(.vertical)
+            
+            Spacer()
+            Image(systemName: "pencil")
+                .resizable()
+                .frame(width: 30, height: 30)
+                .foregroundColor(.blue)
+            Spacer()
         }
-        
+        .padding(5)
+        .background(Color(#colorLiteral(red: 0.9852560163, green: 0.9898150563, blue: 1, alpha: 1)))
+        .cornerRadius(15)
+        .shadow(radius: 5)
     }
+    
 }
 
 struct OnePracticeView_Previews: PreviewProvider {
     static var previews: some View {
-        OnePracticeView()
+        OnePracticeView(practice: practice1)
     }
 }

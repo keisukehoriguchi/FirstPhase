@@ -29,6 +29,8 @@
 		0497AA532649005D000082CE /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA522649005D000082CE /* ResultView.swift */; };
 		0497AA552649006B000082CE /* SettingOtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA542649006B000082CE /* SettingOtherView.swift */; };
 		04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */; };
+		04AA219B264E653A003963D1 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA219A264E653A003963D1 /* Practice.swift */; };
+		04AA219D264E718E003963D1 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA219C264E718E003963D1 /* SampleData.swift */; };
 		04C4F35E264A74BD0045C71F /* ResultCalendarViewParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4F35D264A74BD0045C71F /* ResultCalendarViewParts.swift */; };
 		04C4F360264A7D070045C71F /* CalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4F35F264A7D070045C71F /* CalendarLogic.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		0497AA522649005D000082CE /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		0497AA542649006B000082CE /* SettingOtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOtherView.swift; sourceTree = "<group>"; };
 		04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		04AA219A264E653A003963D1 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
+		04AA219C264E718E003963D1 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		04C4F35D264A74BD0045C71F /* ResultCalendarViewParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCalendarViewParts.swift; sourceTree = "<group>"; };
 		04C4F35F264A7D070045C71F /* CalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +199,8 @@
 			children = (
 				04C4F35F264A7D070045C71F /* CalendarLogic.swift */,
 				041A0DB4264B8D8900B92738 /* DateItem.swift */,
+				04AA219A264E653A003963D1 /* Practice.swift */,
+				04AA219C264E718E003963D1 /* SampleData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				04633FB626479CD400BE576F /* FirstPhaseApp.swift in Sources */,
 				0474A59F2649332200D98E8E /* OnePracticeView.swift in Sources */,
 				0489B5A1264A25A300BB0DD9 /* ResultGraphViewParts.swift in Sources */,
+				04AA219B264E653A003963D1 /* Practice.swift in Sources */,
 				0488F07F264CBAC800476C97 /* WeekCalendarViewParts.swift in Sources */,
 				04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */,
 				0488F081264CC31100476C97 /* DayCalendarViewParts.swift in Sources */,
@@ -387,6 +394,7 @@
 				04C4F35E264A74BD0045C71F /* ResultCalendarViewParts.swift in Sources */,
 				0497AA4C2648FB30000082CE /* MainTabView.swift in Sources */,
 				0488F087264CCCAB00476C97 /* TweetPracticeView.swift in Sources */,
+				04AA219D264E718E003963D1 /* SampleData.swift in Sources */,
 				041A0DB5264B8D8900B92738 /* DateItem.swift in Sources */,
 				0497AA532649005D000082CE /* ResultView.swift in Sources */,
 			);

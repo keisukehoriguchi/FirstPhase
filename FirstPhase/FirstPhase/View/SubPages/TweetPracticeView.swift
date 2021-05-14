@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TweetPracticeView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
     @State var note: String = ""
     @State var startDate: Date = Date()
     @State var finishDate: Date = Date()
@@ -43,7 +45,7 @@ struct TweetPracticeView: View {
                 
                 HStack(alignment: .center) {
                     Button(action: {
-                        
+                        self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Cancel")
                     })
