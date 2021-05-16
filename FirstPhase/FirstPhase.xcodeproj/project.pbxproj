@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		041A0DB5264B8D8900B92738 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0DB4264B8D8900B92738 /* DateItem.swift */; };
+		04553EAB2650C1C6001CDA26 /* PracticeLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */; };
+		04553EAF2650D25C001CDA26 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */; };
 		04633FB626479CD400BE576F /* FirstPhaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FB526479CD400BE576F /* FirstPhaseApp.swift */; };
 		04633FB826479CD400BE576F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FB726479CD400BE576F /* ContentView.swift */; };
 		04633FBA26479CD500BE576F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04633FB926479CD500BE576F /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		041A0DB4264B8D8900B92738 /* DateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
+		04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLogic.swift; sourceTree = "<group>"; };
+		04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
 		04633FB226479CD400BE576F /* FirstPhase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstPhase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04633FB526479CD400BE576F /* FirstPhaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPhaseApp.swift; sourceTree = "<group>"; };
 		04633FB726479CD400BE576F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				04C4F35F264A7D070045C71F /* CalendarLogic.swift */,
 				041A0DB4264B8D8900B92738 /* DateItem.swift */,
 				04AA219A264E653A003963D1 /* Practice.swift */,
+				04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */,
 				04AA219C264E718E003963D1 /* SampleData.swift */,
 			);
 			path = Model;
@@ -209,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */,
+				04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C4F360264A7D070045C71F /* CalendarLogic.swift in Sources */,
+				04553EAF2650D25C001CDA26 /* PracticeViewModel.swift in Sources */,
 				04633FB826479CD400BE576F /* ContentView.swift in Sources */,
 				0489B59E264A23BA00BB0DD9 /* ResultByCalendar.swift in Sources */,
 				0488F085264CCC9000476C97 /* CreatePracticeView.swift in Sources */,
@@ -386,6 +393,7 @@
 				0489B5A1264A25A300BB0DD9 /* ResultGraphViewParts.swift in Sources */,
 				04AA219B264E653A003963D1 /* Practice.swift in Sources */,
 				0488F07F264CBAC800476C97 /* WeekCalendarViewParts.swift in Sources */,
+				04553EAB2650C1C6001CDA26 /* PracticeLogic.swift in Sources */,
 				04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */,
 				0488F081264CC31100476C97 /* DayCalendarViewParts.swift in Sources */,
 				0497AA552649006B000082CE /* SettingOtherView.swift in Sources */,

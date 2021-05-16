@@ -15,15 +15,15 @@ struct Practice {
     var isPractice: Bool
     var needsReminder: Bool
     var reminder: EKReminder?
-    
-    enum PracticeCategory: String{
-        case musicCreation = "musicCreation"
-        case novelmangaCreation = "novelmangaCreation"
-        case illustrationCreation = "illustrationCreation"
-        case movieProduction = "movieProduction"
-        case appProgramCreation = "appProgramCreation"
-        case accyClothDIY = "accyClothDIY"
-        case livePerformance = "livePerformance"
-        case sports = "sports"
-    }
+}
+
+enum PracticeCategory: String, CaseIterable {
+    case musicCreation = "musicCreation"
+    case novelmangaCreation = "novelmangaCreation"
+    case illustrationCreation = "illustrationCreation"
+    case movieProduction = "movieProduction"
+    case appProgramCreation = "appProgramCreation"
+    case accyClothDIY = "accyClothDIY"
+    case livePerformance = "livePerformance"
+    case sports = "sports"
 }

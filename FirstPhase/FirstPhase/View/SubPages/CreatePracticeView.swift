@@ -11,16 +11,22 @@ struct CreatePracticeView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State var practiceName: String = ""
-    @State var categoryName: String = ""
+    @State var category: PracticeCategory = .musicCreation
     @State var reminderIsOn: Bool = false
     @State var reminderDate: Date = Date()
+    @State var showBlankAlert: Bool = false
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("実践項目を選択")) {
                     TextField("実践すること", text: $practiceName)
-                    TextField("カテゴリー", text: $categoryName)
+                    
+                    Picker(selection: $category, label: Text("カテゴリー:"), content: {
+                        ForEach(PracticeCategory.allCases, id: \.self) { (category) in
+                            Text(category.rawValue).tag(category)
+                        }
+                    })
                 }
                 
                 Section {
@@ -42,10 +48,19 @@ struct CreatePracticeView: View {
                     )
                     Spacer()
                     Button(action: {
-                        
+                        if practiceName == "" {
+                            showBlankAlert = true
+                        } else {
+                            //Practiceを登録する
+                            
+                        }
+                            
                     }, label: {
                         Text("Add")
                     })
+                    .alert(isPresented: $showBlankAlert) {
+                        Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
+                    }
                     .frame(width: 100, height: 40, alignment: .center)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
