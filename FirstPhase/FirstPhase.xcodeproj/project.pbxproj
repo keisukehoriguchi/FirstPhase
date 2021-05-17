@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		041A0DB5264B8D8900B92738 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0DB4264B8D8900B92738 /* DateItem.swift */; };
+		0440D7D1265259EC009883E4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440D7D0265259EC009883E4 /* Utilities.swift */; };
 		04553EAB2650C1C6001CDA26 /* PracticeLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */; };
 		04553EAF2650D25C001CDA26 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */; };
 		04633FB626479CD400BE576F /* FirstPhaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FB526479CD400BE576F /* FirstPhaseApp.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		041A0DB4264B8D8900B92738 /* DateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
+		0440D7D0265259EC009883E4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLogic.swift; sourceTree = "<group>"; };
 		04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
 		04633FB226479CD400BE576F /* FirstPhase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstPhase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0440D7CF265259B1009883E4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0440D7D0265259EC009883E4 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		04633FA926479CD400BE576F = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 				0489B59A264A1F5500BB0DD9 /* ViewModel */,
 				0489B599264A1F1400BB0DD9 /* Model */,
 				0497AA4F2649002E000082CE /* View */,
+				0440D7CF265259B1009883E4 /* Utilities */,
 				04633FB926479CD500BE576F /* Assets.xcassets */,
 				04633FBE26479CD500BE576F /* Info.plist */,
 				04633FBB26479CD500BE576F /* Preview Content */,
@@ -404,6 +415,7 @@
 				0488F087264CCCAB00476C97 /* TweetPracticeView.swift in Sources */,
 				04AA219D264E718E003963D1 /* SampleData.swift in Sources */,
 				041A0DB5264B8D8900B92738 /* DateItem.swift in Sources */,
+				0440D7D1265259EC009883E4 /* Utilities.swift in Sources */,
 				0497AA532649005D000082CE /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
