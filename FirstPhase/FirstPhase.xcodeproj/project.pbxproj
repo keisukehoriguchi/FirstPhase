@@ -34,6 +34,7 @@
 		04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */; };
 		04A31039265394B7008278CA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A31038265394B7008278CA /* UserViewModel.swift */; };
 		04A3103B2653952C008278CA /* UserLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3103A2653952C008278CA /* UserLogic.swift */; };
+		04A3103D2653A048008278CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A3103C2653A048008278CA /* GoogleService-Info.plist */; };
 		04AA219B264E653A003963D1 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA219A264E653A003963D1 /* Practice.swift */; };
 		04AA219D264E718E003963D1 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA219C264E718E003963D1 /* SampleData.swift */; };
 		04AE2F8F2653743A00F0D945 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2F8E2653743A00F0D945 /* Tweet.swift */; };
@@ -96,6 +97,7 @@
 		04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		04A31038265394B7008278CA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		04A3103A2653952C008278CA /* UserLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogic.swift; sourceTree = "<group>"; };
+		04A3103C2653A048008278CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04AA219A264E653A003963D1 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		04AA219C264E718E003963D1 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		04AE2F8E2653743A00F0D945 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				0440D7CF265259B1009883E4 /* Utilities */,
 				04633FB926479CD500BE576F /* Assets.xcassets */,
 				04633FBE26479CD500BE576F /* Info.plist */,
+				04A3103C2653A048008278CA /* GoogleService-Info.plist */,
 				04633FBB26479CD500BE576F /* Preview Content */,
 			);
 			path = FirstPhase;
@@ -397,6 +400,7 @@
 			files = (
 				04633FBD26479CD500BE576F /* Preview Assets.xcassets in Resources */,
 				04633FBA26479CD500BE576F /* Assets.xcassets in Resources */,
+				04A3103D2653A048008278CA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

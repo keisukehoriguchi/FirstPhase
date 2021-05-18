@@ -46,5 +46,16 @@ class UserViewModel {
         }
     }
     
+    func fetchInterestedUser(userId: UUID) {
+        userLogic.fetchPracticesFromFirestore { result in
+            switch result {
+            case .failure(let error):
+                print(error.localizedDescription)
+            case .success(let user):
+                self.interestedUser = user
+            }
+        }
+    }
+    
     
 }
