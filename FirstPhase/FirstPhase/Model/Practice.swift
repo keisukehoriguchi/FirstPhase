@@ -8,16 +8,17 @@
 import Foundation
 import EventKit
 
-struct Practice {
-    let id: UUID = UUID()
+struct Practice: Codable {
+    var practiceId: UUID
     var name: String
     var practiceCategory: PracticeCategory
     var isPractice: Bool
     var needsReminder: Bool
-    var reminder: EKReminder?
+    //EKReminderはCodableにしずらそうだから、参照だけ渡して関連づけた方がいいかも。
+//    var reminder: EKReminder?
 }
 
-enum PracticeCategory: String, CaseIterable {
+enum PracticeCategory: String, CaseIterable, Codable {
     case musicCreation = "musicCreation"
     case novelmangaCreation = "novelmangaCreation"
     case illustrationCreation = "illustrationCreation"
