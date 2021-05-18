@@ -7,11 +7,11 @@
 
 import Foundation
 
-//struct TweetViewModel {
+//class TweetViewModel {
 //        private let tweetLogic = TweetLogic()
 //        private var tweets: [Tweet] = []
 //
-//        mutating func addTweet(title: String) {
+//        func addTweet(title: String) {
 //            tweetLogic.addTweetToFirestore(title: title) { result in
 //                switch result {
 //                case .failure(let error):
@@ -22,7 +22,7 @@ import Foundation
 //            }
 //        }
 //
-//        mutating func deletePractice(practice: Practice) {
+//        func deletePractice(practice: Practice) {
 //            tweetLogic.deleteTweetFromFirestore(practice: practice) { result in
 //                switch result {
 //                case .failure(let error):
@@ -33,7 +33,7 @@ import Foundation
 //            }
 //        }
 //
-//        mutating func updatePractice(practice: Practice) {
+//        func updatePractice(practice: Practice) {
 //            tweetLogic.updateTweetToFirestore(practice: practice) { result in
 //                switch result {
 //                case .failure(let error):

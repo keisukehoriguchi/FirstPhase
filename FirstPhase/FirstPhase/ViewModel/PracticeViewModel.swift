@@ -7,16 +7,16 @@
 
 //import Foundation
 //
-//struct PracticeViewModel {
+//class PracticeViewModel {
 //    private let practiceLogic = PracticeLogic()
 //    private var practices: [Practice] = []
 //    
-//    mutating func addPractice(title: String, category: PracticeCategory) {
+//    func addPractice(title: String, category: PracticeCategory) {
 //        let newPractice = practiceLogic.preparePracticeToAdd(title: title, category: category)
 //        practices.append(newPractice)
 //    }
 //    
-//    mutating func deletePractice(practice: Practice) {
+//    func deletePractice(practice: Practice) {
 //        practiceLogic.deletePracticeFromFirestore(practice: practice) { result in
 //            switch result {
 //            case .failure(let error):
@@ -27,7 +27,7 @@
 //        }
 //    }
 //    
-//    mutating func updatePractice(practice: Practice) {
+//    func updatePractice(practice: Practice) {
 //        practiceLogic.updatePracticeToFirestore(practice: practice) { result in
 //            switch result {
 //            case .failure(let error):
