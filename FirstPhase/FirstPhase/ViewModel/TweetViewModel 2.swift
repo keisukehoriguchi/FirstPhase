@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TweetViewModel: ObservableObject {
+class TweetViewModel {
         private let tweetLogic = TweetLogic()
         private var tweets: [Tweet] = []
 
@@ -22,8 +22,8 @@ class TweetViewModel: ObservableObject {
             }
         }
 
-        func deleteTweet(tweet: Tweet) {
-            tweetLogic.deleteTweetFromFirestore(tweet: tweet) { result in
+        func deletePractice(practice: Practice) {
+            tweetLogic.deleteTweetFromFirestore(practice: practice) { result in
                 switch result {
                 case .failure(let error):
                     print(error.localizedDescription)
@@ -33,8 +33,8 @@ class TweetViewModel: ObservableObject {
             }
         }
 
-        func updateTweet(tweet: Tweet) {
-            tweetLogic.updateTweetToFirestore(tweet: tweet) { result in
+        func updatePractice(practice: Practice) {
+            tweetLogic.updateTweetToFirestore(practice: practice) { result in
                 switch result {
                 case .failure(let error):
                     print(error.localizedDescription)

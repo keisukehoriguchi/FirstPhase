@@ -17,7 +17,7 @@ struct TweetLogic {
             handler(.success(tweets))
         }
     
-        func deleteTweetFromFirestore(tweet: Tweet, _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
+        func deleteTweetFromFirestore(practice: Practice, _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
             //Firestoreへの保存での条件分岐
             handler(.failure(.logic))
             handler(.failure(.network))
@@ -26,7 +26,7 @@ struct TweetLogic {
     
         }
     
-        func updateTweetToFirestore(tweet: Tweet, _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
+        func updateTweetToFirestore(practice: Practice, _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
             //Firestoreへの保存での条件分岐
             handler(.failure(.logic))
             handler(.failure(.network))

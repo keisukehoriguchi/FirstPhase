@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserViewModel {
+class UserViewModel: ObservableObject {
     
     private let userLogic = UserLogic()
     var user: User?

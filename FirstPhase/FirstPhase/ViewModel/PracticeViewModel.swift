@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PracticeViewModel {
+final class PracticeViewModel: ObservableObject {
     private let practiceLogic = PracticeLogic()
     private var practices: [Practice] = []
     
