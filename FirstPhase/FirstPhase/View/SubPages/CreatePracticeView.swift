@@ -53,7 +53,6 @@ struct CreatePracticeView: View {
                             if practiceName == "" {
                                 showBlankAlert = true
                             } else {
-                                //Practiceを登録する
                                 practiceViewModel.updatePractice(practice: Practice(practiceId: practice.practiceId, name: practiceName, practiceCategory: category, isPractice: false, needsReminder: false))
                             }
                             
@@ -73,7 +72,6 @@ struct CreatePracticeView: View {
                             if practiceName == "" {
                                 showBlankAlert = true
                             } else {
-                                //Practiceを登録する
                                 practiceViewModel.addPractice(title: practiceName, category: category)
                             }
                             

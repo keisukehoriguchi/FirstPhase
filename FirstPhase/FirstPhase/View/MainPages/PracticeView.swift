@@ -23,7 +23,7 @@ struct PracticeView: View {
                     OnePracticeView(practice: activePractices[index])
                 })
                 .sheet(isPresented: $isPresentedTweetPracticeView, content: {
-                    TweetPracticeView()
+                    TweetPracticeView(practice: activePractices[index])
                 })
             }
             

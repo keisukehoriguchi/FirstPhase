@@ -11,7 +11,8 @@ struct Tweet: Codable {
     var user: User
     let tweetId: UUID
     var practice: Practice
-    var practiceTime: TimeInterval
+    var startDate: Date
+    var finishDate: Date
     var note: String
     var comment: [UUID]
     var prefer: [UUID]

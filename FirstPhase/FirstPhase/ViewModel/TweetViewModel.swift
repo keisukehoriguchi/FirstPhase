@@ -11,8 +11,9 @@ class TweetViewModel: ObservableObject {
         private let tweetLogic = TweetLogic()
         private var tweets: [Tweet] = []
 
-        func addTweet(title: String) {
-            tweetLogic.addTweetToFirestore(title: title) { result in
+    func addTweet(user: User, practice: Practice, startDate: Date, finishDate: Date, note: String) {
+        let newTweet = Tweet(user: user, tweetId: UUID(), practice: practice, startDate: startDate, finishDate: finishDate, note: note, comment: [], prefer: [])
+            tweetLogic.addTweetToFirestore(tweet: newTweet) { result in
                 switch result {
                 case .failure(let error):
                     print(error.localizedDescription)

@@ -9,7 +9,7 @@ import Foundation
 
 struct TweetLogic {
     
-        func addTweetToFirestore(title: String, _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
+    func addTweetToFirestore(tweet: Tweet, _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
             //Firestoreへの保存での条件分岐
             handler(.failure(.logic))
             handler(.failure(.network))

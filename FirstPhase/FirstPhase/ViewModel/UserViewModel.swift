@@ -10,7 +10,7 @@ import Foundation
 class UserViewModel: ObservableObject {
     
     private let userLogic = UserLogic()
-    var user: User?
+    var user: User = User(id: UUID(), name: "", icon: "", profile: "")
     var interestedUser: User?
     
     func addUser(userId: UUID) {

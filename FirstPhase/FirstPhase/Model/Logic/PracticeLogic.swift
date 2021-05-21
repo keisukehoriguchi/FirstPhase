@@ -9,7 +9,7 @@ import Foundation
 
 struct PracticeLogic{
     
-    func preparePracticeToAdd(title: String, category: PracticeCategory) -> Practice {
+    func preparePracticeToAdd(title: String, category: PracticeCategory, isPractice: Bool, needReminder: Bool) -> Practice {
         let practice = Practice(practiceId: UUID(), name: title, practiceCategory: category, isPractice: false, needsReminder: false)
         //Practice返すのではなくデータベースにアクセスして、直接書き換えるみたいな役割にした方がいい。ViewModel部分で該当の部分を読み込むようにする。
         return practice
