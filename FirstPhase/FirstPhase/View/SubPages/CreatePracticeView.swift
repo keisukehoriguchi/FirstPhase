@@ -12,27 +12,28 @@ struct CreatePracticeView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var practiceName: String = ""
     @State var category: PracticeCategory = .musicCreation
+    @State var isPractice: Bool = true
     @State var reminderIsOn: Bool = false
     @State var reminderDate: Date = Date()
     @State var showBlankAlert: Bool = false
     @EnvironmentObject var practiceViewModel: PracticeViewModel
+    //Updateがある場合はそれぞれの値を初期値として渡す。onAppearでは再読み込みが走ってしまった。
     @State var updatePractice:Practice?
     
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("実践項目を選択")) {
+                Section {
                     TextField("実践すること", text: $practiceName)
                     Picker(selection: $category, label: Text("カテゴリー:"), content: {
                         ForEach(PracticeCategory.allCases, id: \.self) { (category) in
                             Text(category.rawValue).tag(category)
                         }
                     })
-                }
-                
-                Section {
+                    Toggle("勉強ではなく実践のTraining", isOn: $isPractice)
                     Toggle("リマインダーを設定する", isOn: $reminderIsOn)
                     DatePicker("Date", selection: $reminderDate, displayedComponents: .hourAndMinute)
+                    
                 }
                 
                 
@@ -72,7 +73,7 @@ struct CreatePracticeView: View {
                             if practiceName == "" {
                                 showBlankAlert = true
                             } else {
-                                practiceViewModel.addPractice(title: practiceName, category: category)
+                                practiceViewModel.addPractice(title: practiceName, category: category, isPractice: isPractice, needReminder: reminderIsOn)
                             }
                             
                         }, label: {
@@ -97,7 +98,6 @@ struct CreatePracticeView: View {
 
 struct CreatePracticeView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePracticeView()
         CreatePracticeView()
     }
 }

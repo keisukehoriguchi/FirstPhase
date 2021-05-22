@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import EventKit
 
 struct PracticeLogic{
     
-    func preparePracticeToAdd(title: String, category: PracticeCategory, isPractice: Bool, needReminder: Bool) -> Practice {
-        let practice = Practice(practiceId: UUID(), name: title, practiceCategory: category, isPractice: false, needsReminder: false)
+    func addPracticeToFirestore(practice: Practice, _ handler: @escaping FirestoreResultHandler<[Practice]>) {
         //Practice返すのではなくデータベースにアクセスして、直接書き換えるみたいな役割にした方がいい。ViewModel部分で該当の部分を読み込むようにする。
-        return practice
+        handler(.failure(.logic))
+        handler(.failure(.network))
+        let practices: [Practice] = []
+        handler(.success(practices))
     }
     
     func deletePracticeFromFirestore(practice: Practice, _ handler: @escaping FirestoreResultHandler<[Practice]>) {

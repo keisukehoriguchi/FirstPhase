@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import EventKit
 
 struct ContentView: View {
     @StateObject var practiceViewModel = PracticeViewModel()
@@ -13,11 +14,13 @@ struct ContentView: View {
     @StateObject var commentViewModel = CommentViewModel()
     @StateObject var userViewModel = UserViewModel()
     
-    
     var body: some View {
         MainTabView().environmentObject(practiceViewModel).environmentObject(tweetViewModel).environmentObject(commentViewModel).environmentObject(userViewModel)
+        
     }
+    
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     

@@ -22,3 +22,5 @@ PickerのSelectionにオプショナルのEnumをセットした際に、
 
 VMをStructで構成した場合, mutating func内のクロージャ（Firestore へのアクセス成功と失敗の管理用）で自己の値を書き換えられなかった。
 なのでクラスにする必要が出てきた。
+ViewのUpdatePracticeがある場合はそれぞれの値を初期値として渡す。onAppearでは再読み込みが走ってしまった。
+全てのVMはエラーの表示のためにDIが少なくとも必要じゃない？
