@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import FirstPhase
 
 class FirstPhaseUITests: XCTestCase {
 

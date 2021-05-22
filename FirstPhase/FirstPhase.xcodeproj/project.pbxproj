@@ -34,6 +34,7 @@
 		04985D3C26564C980006C5E5 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3B26564C980006C5E5 /* CommentViewModel.swift */; };
 		04985D3E26564D2C0006C5E5 /* CommentLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3D26564D2C0006C5E5 /* CommentLogic.swift */; };
 		04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */; };
+		04A25A50265941F100CB91CD /* PracticeLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */; };
 		04A31039265394B7008278CA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A31038265394B7008278CA /* UserViewModel.swift */; };
 		04A3103B2653952C008278CA /* UserLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3103A2653952C008278CA /* UserLogic.swift */; };
 		04A3103D2653A048008278CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A3103C2653A048008278CA /* GoogleService-Info.plist */; };
@@ -103,6 +104,7 @@
 		04985D3B26564C980006C5E5 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		04985D3D26564D2C0006C5E5 /* CommentLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLogic.swift; sourceTree = "<group>"; };
 		04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLogicTests.swift; sourceTree = "<group>"; };
 		04A31038265394B7008278CA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		04A3103A2653952C008278CA /* UserLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogic.swift; sourceTree = "<group>"; };
 		04A3103C2653A048008278CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				04633FC726479CD600BE576F /* FirstPhaseTests.swift */,
+				04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */,
 				04633FC926479CD600BE576F /* Info.plist */,
 			);
 			path = FirstPhaseTests;
@@ -633,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04633FC826479CD600BE576F /* FirstPhaseTests.swift in Sources */,
+				04A25A50265941F100CB91CD /* PracticeLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
