@@ -8,7 +8,7 @@
 import Foundation
 import EventKit
 
-struct Practice: Codable {
+struct Practice: Codable, Equatable {
     var practiceId: UUID
     var name: String
     var practiceCategory: PracticeCategory

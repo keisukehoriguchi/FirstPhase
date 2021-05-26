@@ -14,3 +14,4 @@ enum FirestoreResultError: Error {
     case network
     case other
 }
+
