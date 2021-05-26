@@ -16,9 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         MainTabView().environmentObject(practiceViewModel).environmentObject(tweetViewModel).environmentObject(commentViewModel).environmentObject(userViewModel)
-        
     }
-    
 }
 
 

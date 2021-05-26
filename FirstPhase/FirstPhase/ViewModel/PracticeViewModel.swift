@@ -13,8 +13,12 @@ import EventKit
 
 final class PracticeViewModel: ObservableObject {
     private let practiceLogic = PracticeLogic()
-    private var practices: [Practice] = []
+    var practices: [Practice] = [practice1, practice2]
     private var eventStore = EKEventStore()
+    
+    init() {
+        fetchPractice()
+    }
     
     func addPractice(title: String, category: PracticeCategory, isPractice: Bool, needReminder: Bool) {
         let newPractice = Practice(practiceId: UUID(), name: title, practiceCategory: category, isPractice: isPractice, needsReminder: needReminder)
@@ -41,6 +45,17 @@ final class PracticeViewModel: ObservableObject {
     
     func updatePractice(practice: Practice) {
         practiceLogic.updatePracticeToFirestore(practice: practice) { result in
+            switch result {
+            case .failure(let error):
+                print(error.localizedDescription)
+            case .success(let newPractices):
+                self.practices = newPractices
+            }
+        }
+    }
+    
+    func fetchPractice() {
+        practiceLogic.fetchPracticesFromFirestore { result in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)

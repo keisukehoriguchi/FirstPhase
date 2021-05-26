@@ -48,6 +48,7 @@ struct CreatePracticeView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.blue, lineWidth: 1)
                     )
+                    
                     Spacer()
                     if let practice = updatePractice {
                         Button(action: {

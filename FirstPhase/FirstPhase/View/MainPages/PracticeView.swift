@@ -11,19 +11,18 @@ struct PracticeView: View {
     
     @State var isPresentedTweetPracticeView: Bool = false
     @State var isPresentedCreatePracticeView: Bool = false
-    @State var activePractices: [Practice] = [practice1, practice2]
+    @EnvironmentObject var practiceViewModel: PracticeViewModel
     
     var body: some View {
         VStack(spacing: 20) {
-            
-            ForEach(activePractices.indices, id: \.self) { index in
+            ForEach(practiceViewModel.practices.indices, id: \.self) { index in
                 Button(action: {
                     self.isPresentedTweetPracticeView.toggle()
                 }, label: {
-                    OnePracticeView(practice: activePractices[index])
+                    OnePracticeView(practice: practiceViewModel.practices[index])
                 })
                 .sheet(isPresented: $isPresentedTweetPracticeView, content: {
-                    TweetPracticeView(practice: activePractices[index])
+                    TweetPracticeView(practice: practiceViewModel.practices[index])
                 })
             }
             
@@ -42,6 +41,6 @@ struct PracticeView: View {
 
 struct PracticeView_Previews: PreviewProvider {
     static var previews: some View {
-        PracticeView()
+        PracticeView().environmentObject(PracticeViewModel())
     }
 }

@@ -58,7 +58,9 @@ struct TweetPracticeView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.blue, lineWidth: 1)
                     )
+                    
                     Spacer()
+                    
                     if let tweet = updateTweet {
                         Button(action: {
                             tweetViewModel.updateTweet(tweet: tweet)
