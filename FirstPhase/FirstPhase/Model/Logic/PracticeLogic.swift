@@ -15,7 +15,7 @@ import FirebaseFirestoreSwift
 struct PracticeLogic{
     
     private let db = Firestore.firestore()
-    private let practicePath: String = "Practice"
+    var practicePath: String = "Practice"
     
     func addPracticeToFirestore(practice: Practice, _ handler: @escaping FirestoreResultHandler<[Practice]>) {
         var practices:[Practice] = []
@@ -36,6 +36,7 @@ struct PracticeLogic{
                     return try? Firestore.Decoder().decode(Practice.self, from: document.data())
                 }
                 practices.append(contentsOf: practice ?? [])
+                practices.sort { $0.practiceId.uuidString > $1.practiceId.uuidString }
                 handler(.success(practices))
             }
         }
@@ -54,6 +55,7 @@ struct PracticeLogic{
                     return try? Firestore.Decoder().decode(Practice.self, from: document.data())
                 }
                 practices.append(contentsOf: practice ?? [])
+                practices.sort { $0.practiceId.uuidString > $1.practiceId.uuidString }
                 handler(.success(practices))
             }
         }
@@ -78,6 +80,7 @@ struct PracticeLogic{
                     return try? Firestore.Decoder().decode(Practice.self, from: document.data())
                 }
                 practices.append(contentsOf: practice ?? [])
+                practices.sort { $0.practiceId.uuidString > $1.practiceId.uuidString }
                 handler(.success(practices))
             }
         }
@@ -94,6 +97,7 @@ struct PracticeLogic{
                     return try? Firestore.Decoder().decode(Practice.self, from: document.data())
                 }
                 practices.append(contentsOf: practice ?? [])
+                practices.sort { $0.practiceId.uuidString > $1.practiceId.uuidString }
                 handler(.success(practices))
             }
         }
