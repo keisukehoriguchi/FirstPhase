@@ -12,7 +12,7 @@ class CommentViewModel: ObservableObject {
         private var comments: [Comment] = []
 
         func addTweet(title: String) {
-            commentLogic.addCommentToFirestore(title: title) { result in
+            commentLogic.addCommentToFirestore(comment: comment) { result in
                 switch result {
                 case .failure(let error):
                     print(error.localizedDescription)
