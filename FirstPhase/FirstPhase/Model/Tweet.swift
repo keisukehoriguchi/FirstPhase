@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Tweet: Codable {
+struct Tweet: Codable, Equatable {
+    static func == (lhs: Tweet, rhs: Tweet) -> Bool {
+        lhs.tweetId == rhs.tweetId
+    }
+    
     var user: User
     let tweetId: UUID
     var practice: Practice

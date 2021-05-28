@@ -11,7 +11,6 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 
-
 struct PracticeLogic{
     
     private let db = Firestore.firestore()

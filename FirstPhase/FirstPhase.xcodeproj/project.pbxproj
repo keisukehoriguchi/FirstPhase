@@ -20,6 +20,7 @@
 		04633FD326479CD600BE576F /* FirstPhaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FD226479CD600BE576F /* FirstPhaseUITests.swift */; };
 		0474A59D264923A700D98E8E /* OneTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A59C264923A700D98E8E /* OneTweetView.swift */; };
 		0474A59F2649332200D98E8E /* OnePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A59E2649332200D98E8E /* OnePracticeView.swift */; };
+		047BB21D2660CACE0024BAEB /* TweetLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB21C2660CACE0024BAEB /* TweetLogicTests.swift */; };
 		0488F07F264CBAC800476C97 /* WeekCalendarViewParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488F07E264CBAC800476C97 /* WeekCalendarViewParts.swift */; };
 		0488F081264CC31100476C97 /* DayCalendarViewParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488F080264CC31100476C97 /* DayCalendarViewParts.swift */; };
 		0488F085264CCC9000476C97 /* CreatePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488F084264CCC9000476C97 /* CreatePracticeView.swift */; };
@@ -34,7 +35,7 @@
 		0497AA552649006B000082CE /* SettingOtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA542649006B000082CE /* SettingOtherView.swift */; };
 		04985D3C26564C980006C5E5 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3B26564C980006C5E5 /* CommentViewModel.swift */; };
 		04985D3E26564D2C0006C5E5 /* CommentLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3D26564D2C0006C5E5 /* CommentLogic.swift */; };
-		049F23A52660B47A00835D1B /* TweetLogicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F23A42660B47A00835D1B /* TweetLogicTest.swift */; };
+		049F23A72660C26B00835D1B /* CommentLogicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F23A62660C26B00835D1B /* CommentLogicTest.swift */; };
 		04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */; };
 		04A25A50265941F100CB91CD /* PracticeLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */; };
 		04A31039265394B7008278CA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A31038265394B7008278CA /* UserViewModel.swift */; };
@@ -92,6 +93,7 @@
 		04633FD426479CD600BE576F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0474A59C264923A700D98E8E /* OneTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTweetView.swift; sourceTree = "<group>"; };
 		0474A59E2649332200D98E8E /* OnePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePracticeView.swift; sourceTree = "<group>"; };
+		047BB21C2660CACE0024BAEB /* TweetLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLogicTests.swift; sourceTree = "<group>"; };
 		0488F07E264CBAC800476C97 /* WeekCalendarViewParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendarViewParts.swift; sourceTree = "<group>"; };
 		0488F080264CC31100476C97 /* DayCalendarViewParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCalendarViewParts.swift; sourceTree = "<group>"; };
 		0488F084264CCC9000476C97 /* CreatePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePracticeView.swift; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 		0497AA542649006B000082CE /* SettingOtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOtherView.swift; sourceTree = "<group>"; };
 		04985D3B26564C980006C5E5 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		04985D3D26564D2C0006C5E5 /* CommentLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLogic.swift; sourceTree = "<group>"; };
-		049F23A42660B47A00835D1B /* TweetLogicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLogicTest.swift; sourceTree = "<group>"; };
+		049F23A62660C26B00835D1B /* CommentLogicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLogicTest.swift; sourceTree = "<group>"; };
 		04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLogicTests.swift; sourceTree = "<group>"; };
 		04A31038265394B7008278CA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -223,7 +225,8 @@
 			children = (
 				04633FC726479CD600BE576F /* FirstPhaseTests.swift */,
 				04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */,
-				049F23A42660B47A00835D1B /* TweetLogicTest.swift */,
+				047BB21C2660CACE0024BAEB /* TweetLogicTests.swift */,
+				049F23A62660C26B00835D1B /* CommentLogicTest.swift */,
 				04633FC926479CD600BE576F /* Info.plist */,
 			);
 			path = FirstPhaseTests;
@@ -636,7 +639,8 @@
 			files = (
 				04633FC826479CD600BE576F /* FirstPhaseTests.swift in Sources */,
 				04A25A50265941F100CB91CD /* PracticeLogicTests.swift in Sources */,
-				049F23A52660B47A00835D1B /* TweetLogicTest.swift in Sources */,
+				049F23A72660C26B00835D1B /* CommentLogicTest.swift in Sources */,
+				047BB21D2660CACE0024BAEB /* TweetLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

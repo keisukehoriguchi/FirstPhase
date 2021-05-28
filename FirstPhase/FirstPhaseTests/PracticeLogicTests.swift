@@ -14,22 +14,22 @@ final class PracticeLogicTests: XCTestCase {
     
     var practiceLogic = PracticeLogic()
     
-//    override func setUpWithError() throws {
-//        // Put setup code here. This method is called before the invocation of each test method in the class.
-//        practiceLogic.practicePath = "PracticeTest"
-//        let db = Firestore.firestore()
-//
-//        let documentRef = db.collection(practiceLogic.practicePath).document(practice1.practiceId.uuidString)
-//        do {
-//            try documentRef.setData(from: practice1)
-//        } catch {
-//            XCTFail()
-//        }
-//    }
-//
-//    override func tearDownWithError() throws {
-//        // Put teardown code here. This method is called after the invocation of each test method in the class.
-//    }
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+        practiceLogic.practicePath = "PracticeTest"
+        let db = Firestore.firestore()
+
+        let documentRef = db.collection(practiceLogic.practicePath).document(practice1.practiceId.uuidString)
+        do {
+            try documentRef.setData(from: practice1)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
     
     func testFetch() throws {
         let exp: XCTestExpectation = expectation(description: "wait for finish")

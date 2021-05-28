@@ -1,20 +1,20 @@
-
 import XCTest
 @testable import FirstPhase
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-final class TweetLogicTest: XCTestCase {
-    
-    var tweetLogic = TweetLogic()
+final class CommentLogicTest: XCTestCase {
+
+    var commentLogic = CommentLogic()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        commentLogic.commentPath = "CommentTest"
         let db = Firestore.firestore()
-        
-        let documentRef = db.collection(practiceLogic.practicePath).document(practice1.practiceId.uuidString)
+
+        let documentRef = db.collection(commentLogic.commentPath).document(comment1.commentId.uuidString)
         do {
-            try documentRef.setData(from: tweet1)
+            try documentRef.setData(from: comment1)
         } catch {
             XCTFail()
         }
@@ -26,13 +26,13 @@ final class TweetLogicTest: XCTestCase {
 
     func testFetch() throws {
         let exp: XCTestExpectation = expectation(description: "wait for finish")
-        tweetLogic.fetchTweetsFromFirestore { result in
+        commentLogic.fetchCommentsFromFirestore { result in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
                 XCTFail()
-            case .success(let tweets):
-                XCTAssertEqual([tweet1], tweets)
+            case .success(let comments):
+                XCTAssertEqual([comment1], comments)
                 exp.fulfill()
             }
         }
@@ -41,13 +41,13 @@ final class TweetLogicTest: XCTestCase {
 
     func testAdd() throws {
         let exp: XCTestExpectation = expectation(description: "wait for finish")
-        practiceLogic.addPracticeToFirestore(practice: practice2    ) { result in
+        commentLogic.addCommentToFirestore(comment: comment2) { result in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
                 XCTFail()
-            case .success(let practices):
-                XCTAssertEqual([practice1, practice2], practices)
+            case .success(let comments):
+                XCTAssertEqual([comment1, comment2], comments)
                 exp.fulfill()
             }
         }
@@ -56,13 +56,13 @@ final class TweetLogicTest: XCTestCase {
 
     func testUpdate() throws {
         let exp: XCTestExpectation = expectation(description: "wait for finish")
-        practiceLogic.updatePracticeToFirestore(practice: practice2_1) { result in
+        commentLogic.updateCommentToFirestore(comment: comment2_1) { result in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
                 XCTFail()
-            case .success(let practices):
-                XCTAssertEqual([practice1, practice2_1], practices)
+            case .success(let comments):
+                XCTAssertEqual([comment1, comment2_1], comments)
                 exp.fulfill()
             }
         }
@@ -71,13 +71,13 @@ final class TweetLogicTest: XCTestCase {
 
     func testDelete() throws {
         let exp: XCTestExpectation = expectation(description: "wait for finish")
-        practiceLogic.deletePracticeFromFirestore(practice: practice2_1) { result in
+        commentLogic.deleteCommentFromFirestore(comment: comment2_1) { result in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
                 XCTFail()
-            case .success(let practices):
-                XCTAssertEqual([practice1], practices)
+            case .success(let comments):
+                XCTAssertEqual([comment1], comments)
                 exp.fulfill()
             }
         }

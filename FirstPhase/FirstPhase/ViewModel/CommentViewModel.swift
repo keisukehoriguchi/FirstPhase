@@ -8,39 +8,39 @@
 import Foundation
 
 class CommentViewModel: ObservableObject {
-        private let commentLogic = CommentLogic()
-        private var comments: [Comment] = []
-
-        func addTweet(title: String) {
-            commentLogic.addCommentToFirestore(comment: comment) { result in
-                switch result {
-                case .failure(let error):
-                    print(error.localizedDescription)
-                case .success(let newComment):
-                    self.comments = newComment
-                }
-            }
-        }
-
-        func deletePractice(comment: Comment) {
-            commentLogic.deleteCommentFromFirestore(comment: comment) { result in
-                switch result {
-                case .failure(let error):
-                    print(error.localizedDescription)
-                case .success(let newComments):
-                    self.comments = newComments
-                }
-            }
-        }
-
-        func updatePractice(comment: Comment) {
-            commentLogic.updateCommentToFirestore(comment: comment) { result in
-                switch result {
-                case .failure(let error):
-                    print(error.localizedDescription)
-                case .success(let newComments):
-                    self.comments = newComments
-                }
-            }
-        }
+//        private let commentLogic = CommentLogic()
+//        private var comments: [Comment] = []
+//
+//        func addComment(comment: Comment) {
+//            commentLogic.addCommentToFirestore(comment: Comment) { result in
+//                switch result {
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                case .success(let newComment):
+//                    self.comments = newComment
+//                }
+//            }
+//        }
+//
+//        func deletePractice(comment: Comment) {
+//            commentLogic.deleteCommentFromFirestore(comment: comment) { result in
+//                switch result {
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                case .success(let newComments):
+//                    self.comments = newComments
+//                }
+//            }
+//        }
+//
+//        func updatePractice(comment: Comment) {
+//            commentLogic.updateCommentToFirestore(comment: comment) { result in
+//                switch result {
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                case .success(let newComments):
+//                    self.comments = newComments
+//                }
+//            }
+//        }
 }

@@ -9,10 +9,11 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct TweetLogic {
+struct TweetLogic{
     
-    private let db = Firestore.firestore()
     var tweetPath: String = "Tweet"
+    private let db = Firestore.firestore()
+    
     
     func addTweetToFirestore(tweet: Tweet, _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
         var tweets:[Tweet] = []
