@@ -11,6 +11,7 @@
 		0440D7D1265259EC009883E4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440D7D0265259EC009883E4 /* Utilities.swift */; };
 		04553EAB2650C1C6001CDA26 /* PracticeLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */; };
 		04553EAF2650D25C001CDA26 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */; };
+		045D595926609F4000F6DF64 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 045D595826609F4000F6DF64 /* README.md */; };
 		04633FB626479CD400BE576F /* FirstPhaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FB526479CD400BE576F /* FirstPhaseApp.swift */; };
 		04633FB826479CD400BE576F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04633FB726479CD400BE576F /* ContentView.swift */; };
 		04633FBA26479CD500BE576F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04633FB926479CD500BE576F /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		0497AA552649006B000082CE /* SettingOtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA542649006B000082CE /* SettingOtherView.swift */; };
 		04985D3C26564C980006C5E5 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3B26564C980006C5E5 /* CommentViewModel.swift */; };
 		04985D3E26564D2C0006C5E5 /* CommentLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3D26564D2C0006C5E5 /* CommentLogic.swift */; };
+		049F23A52660B47A00835D1B /* TweetLogicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F23A42660B47A00835D1B /* TweetLogicTest.swift */; };
 		04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */; };
 		04A25A50265941F100CB91CD /* PracticeLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */; };
 		04A31039265394B7008278CA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A31038265394B7008278CA /* UserViewModel.swift */; };
@@ -75,6 +77,7 @@
 		0440D7D0265259EC009883E4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLogic.swift; sourceTree = "<group>"; };
 		04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
+		045D595826609F4000F6DF64 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		04633FB226479CD400BE576F /* FirstPhase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstPhase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04633FB526479CD400BE576F /* FirstPhaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPhaseApp.swift; sourceTree = "<group>"; };
 		04633FB726479CD400BE576F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		0497AA542649006B000082CE /* SettingOtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOtherView.swift; sourceTree = "<group>"; };
 		04985D3B26564C980006C5E5 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		04985D3D26564D2C0006C5E5 /* CommentLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLogic.swift; sourceTree = "<group>"; };
+		049F23A42660B47A00835D1B /* TweetLogicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetLogicTest.swift; sourceTree = "<group>"; };
 		04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLogicTests.swift; sourceTree = "<group>"; };
 		04A31038265394B7008278CA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -168,7 +172,7 @@
 		04633FA926479CD400BE576F = {
 			isa = PBXGroup;
 			children = (
-				04A3103E2653A797008278CA /* New Group */,
+				045D595826609F4000F6DF64 /* README.md */,
 				04633FB426479CD400BE576F /* FirstPhase */,
 				04633FC626479CD600BE576F /* FirstPhaseTests */,
 				04633FD126479CD600BE576F /* FirstPhaseUITests */,
@@ -219,6 +223,7 @@
 			children = (
 				04633FC726479CD600BE576F /* FirstPhaseTests.swift */,
 				04A25A4F265941F100CB91CD /* PracticeLogicTests.swift */,
+				049F23A42660B47A00835D1B /* TweetLogicTest.swift */,
 				04633FC926479CD600BE576F /* Info.plist */,
 			);
 			path = FirstPhaseTests;
@@ -311,13 +316,6 @@
 				0489B59D264A23BA00BB0DD9 /* ResultByCalendar.swift */,
 			);
 			path = individualView;
-			sourceTree = "<group>";
-		};
-		04A3103E2653A797008278CA /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		04AE2F8D265373F100F0D945 /* Logic */ = {
@@ -465,6 +463,7 @@
 			files = (
 				04633FBD26479CD500BE576F /* Preview Assets.xcassets in Resources */,
 				04633FBA26479CD500BE576F /* Assets.xcassets in Resources */,
+				045D595926609F4000F6DF64 /* README.md in Resources */,
 				04A3103D2653A048008278CA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,6 +636,7 @@
 			files = (
 				04633FC826479CD600BE576F /* FirstPhaseTests.swift in Sources */,
 				04A25A50265941F100CB91CD /* PracticeLogicTests.swift in Sources */,
+				049F23A52660B47A00835D1B /* TweetLogicTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
