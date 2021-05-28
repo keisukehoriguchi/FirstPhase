@@ -14,7 +14,6 @@ struct TweetLogic{
     var tweetPath: String = "Tweet"
     private let db = Firestore.firestore()
     
-    
     func addTweetToFirestore(tweet: Tweet, _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
         var tweets:[Tweet] = []
         let documentRef = db.collection(tweetPath).document(tweet.tweetId.uuidString)
@@ -89,7 +88,6 @@ struct TweetLogic{
                 handler(.success(tweets))
             }
         }
-        
     }
     
     func fetchTweetsFromFirestore( _ handler: @escaping FirestoreResultHandler<[Tweet]>) {

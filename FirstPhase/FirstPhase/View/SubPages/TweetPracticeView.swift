@@ -52,12 +52,12 @@ struct TweetPracticeView: View {
                         self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Cancel")
+                            .frame(width: 100, height: 40, alignment: .center)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue, lineWidth: 1)
+                            )
                     })
-                    .frame(width: 100, height: 40, alignment: .center)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.blue, lineWidth: 1)
-                    )
                     
                     Spacer()
                     
@@ -66,23 +66,23 @@ struct TweetPracticeView: View {
                             tweetViewModel.updateTweet(tweet: tweet)
                         }, label: {
                             Text("Update")
+                                .frame(width: 100, height: 40, alignment: .center)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.blue, lineWidth: 1)
+                                )
                         })
-                        .frame(width: 100, height: 40, alignment: .center)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 1)
-                        )
                     } else {
                         Button(action: {
                             tweetViewModel.addTweet(user: userViewModel.user, practice: practice, startDate: startDate, finishDate: finishDate, note: note)
                         }, label: {
                             Text("Tweet")
+                                .frame(width: 100, height: 40, alignment: .center)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.blue, lineWidth: 1)
+                                )
                         })
-                        .frame(width: 100, height: 40, alignment: .center)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 1)
-                        )
                     }
                 }
                 
@@ -94,6 +94,8 @@ struct TweetPracticeView: View {
 
 struct TweetPracticeView_Previews: PreviewProvider {
     static var previews: some View {
-        TweetPracticeView(practice: practice1)
+        Group {
+            TweetPracticeView(practice: practice1)
+        }
     }
 }

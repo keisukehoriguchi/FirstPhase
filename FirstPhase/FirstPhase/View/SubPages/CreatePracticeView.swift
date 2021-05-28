@@ -39,56 +39,57 @@ struct CreatePracticeView: View {
                 
                 HStack(alignment: .center) {
                     Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }, label: {
+//                        self.presentationMode.wrappedValue.dismiss()
+                        print("cancel押された！")
+                    }) {
                         Text("Cancel")
-                    })
-                    .frame(width: 100, height: 40, alignment: .center)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.blue, lineWidth: 1)
-                    )
-                    
-                    Spacer()
-                    if let practice = updatePractice {
-                        Button(action: {
-                            if practiceName == "" {
-                                showBlankAlert = true
-                            } else {
-                                practiceViewModel.updatePractice(practice: Practice(practiceId: practice.practiceId, name: practiceName, practiceCategory: category, isPractice: false, needsReminder: false))
-                            }
-                            
-                        }, label: {
-                            Text("Update")
-                        })
-                        .alert(isPresented: $showBlankAlert) {
-                            Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
-                        }
-                        .frame(width: 100, height: 40, alignment: .center)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 1)
-                        )
-                    } else {
-                        Button(action: {
-                            if practiceName == "" {
-                                showBlankAlert = true
-                            } else {
-                                practiceViewModel.addPractice(title: practiceName, category: category, isPractice: isPractice, needReminder: reminderIsOn)
-                            }
-                            
-                        }, label: {
-                            Text("Add")
-                        })
-                        .alert(isPresented: $showBlankAlert) {
-                            Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
-                        }
-                        .frame(width: 100, height: 40, alignment: .center)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 1)
-                        )
+//                            .frame(width: 100, height: 40, alignment: .center)
+//                            .overlay(
+//                                RoundedRectangle(cornerRadius: 10)
+//                                    .stroke(Color.blue, lineWidth: 1))
                     }
+                    Divider()
+                    Spacer()
+                    Divider()
+//                    if let practice = updatePractice {
+//                        Button(action: {
+//                            if practiceName == "" {
+//                                showBlankAlert = true
+//                            } else {
+//                                practiceViewModel.updatePractice(practice: Practice(practiceId: practice.practiceId, name: practiceName, practiceCategory: category, isPractice: false, needsReminder: false))
+//                            }
+//                        }) {
+//                            Text("Update")
+//                                .frame(width: 100, height: 40, alignment: .center)
+//                                .overlay(
+//                                    RoundedRectangle(cornerRadius: 10)
+//                                        .stroke(Color.blue, lineWidth: 1)
+//                                )
+//                        }
+//                        .alert(isPresented: $showBlankAlert) {
+//                            Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
+//                        }
+//
+//                    } else {
+                        Button(action: {
+//                            if practiceName == "" {
+//                                showBlankAlert = true
+//                            } else {
+//                                practiceViewModel.addPractice(title: practiceName, category: category, isPractice: isPractice, needReminder: reminderIsOn)
+//                            }
+                            print("Add押された！")
+                        }) {
+                            Text("Add")
+//                                .frame(width: 100, height: 40, alignment: .center)
+//                                .overlay(
+//                                    RoundedRectangle(cornerRadius: 10)
+//                                        .stroke(Color.blue, lineWidth: 1)
+//                                )
+                        }
+//                        .alert(isPresented: $showBlankAlert) {
+//                            Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
+//                        }
+//                    }
                 }
                 
             }

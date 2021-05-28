@@ -17,7 +17,7 @@ final class PracticeViewModel: ObservableObject {
     private var eventStore = EKEventStore()
     
     init() {
-        fetchPractice()
+        fetchPractices()
     }
     
     func addPractice(title: String, category: PracticeCategory, isPractice: Bool, needReminder: Bool) {
@@ -54,7 +54,7 @@ final class PracticeViewModel: ObservableObject {
         }
     }
     
-    func fetchPractice() {
+    func fetchPractices() {
         practiceLogic.fetchPracticesFromFirestore { result in
             switch result {
             case .failure(let error):

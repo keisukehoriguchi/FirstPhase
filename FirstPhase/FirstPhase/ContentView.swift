@@ -15,7 +15,11 @@ struct ContentView: View {
     @StateObject var userViewModel = UserViewModel()
     
     var body: some View {
-        MainTabView().environmentObject(practiceViewModel).environmentObject(tweetViewModel).environmentObject(commentViewModel).environmentObject(userViewModel)
+        MainTabView()
+            .environmentObject(practiceViewModel)
+            .environmentObject(tweetViewModel)
+            .environmentObject(commentViewModel)
+            .environmentObject(userViewModel)
     }
 }
 
