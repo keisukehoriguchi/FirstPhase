@@ -14,30 +14,43 @@ struct PracticeView: View {
     @EnvironmentObject var practiceViewModel: PracticeViewModel
     
     var body: some View {
-        VStack(spacing: 20) {
-            ForEach(practiceViewModel.practices.indices, id: \.self) { index in
-                
-                Button(action: {
-                    isPresentedTweetPracticeView.toggle()
-                }) {
-//                    OnePracticeView(practice: practiceViewModel.practices[index])
-                    Text(practiceViewModel.practices[index].name)
-                        .sheet(isPresented: $isPresentedTweetPracticeView, content: {
-                            TweetPracticeView(practice: practiceViewModel.practices[index])
-                        })
+        NavigationView {
+            VStack(spacing: 20) {
+                ForEach(practiceViewModel.practices.indices, id: \.self) { index in
+                    
+                    Button(action: {
+                        practiceViewModel.practicesBoolForPracticeView[index].toggle()
+                    }) {
+                        OnePracticeView(practice: practiceViewModel.practices[index])
+                    }
+                    .sheet(isPresented: $practiceViewModel.practicesBoolForPracticeView[index], content: {
+                        TweetPracticeView(practice: practiceViewModel.practices[index])
+                    })
+                    .gesture(DragGesture()
+                                .onEnded({ value in
+                                    if (abs(value.translation.width) < 20) { return }
+                                    if value.translation.width > 20 {
+                                        
+                                    } else if value.translation.width < -20 {
+                                        
+                                    }
+                                }))
+                    //                NavigationLink(destination: TweetPracticeView(practice: practiceViewModel.practices[index])) {
+                    //                    OnePracticeView(practice: practiceViewModel.practices[index])
+                    //                }
+                    
                 }
                 
+                Button(action: {
+                    self.isPresentedCreatePracticeView.toggle()
+                }, label: {
+                    Label("Add Another Practice", systemImage: "plus")
+                        .padding()
+                })
+                .sheet(isPresented: $isPresentedCreatePracticeView, content: {
+                    CreatePracticeView()
+                })
             }
-            
-            Button(action: {
-                self.isPresentedCreatePracticeView.toggle()
-            }, label: {
-                Label("Add Another Practice", systemImage: "plus")
-                    .padding()
-            })
-            .sheet(isPresented: $isPresentedCreatePracticeView, content: {
-                CreatePracticeView()
-            })
         }
     }
 }

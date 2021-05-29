@@ -13,7 +13,15 @@ import EventKit
 
 final class PracticeViewModel: ObservableObject {
     private let practiceLogic = PracticeLogic()
-    var practices: [Practice] = [practice1, practice2]
+    var practices: [Practice] = [practice1, practice2] {
+        didSet {
+            practicesBoolForPracticeView = []
+            for _ in 0..<practices.count {
+                practicesBoolForPracticeView.append(false)
+            }
+        }
+    }
+    @Published var practicesBoolForPracticeView: [Bool] = []
     private var eventStore = EKEventStore()
     
     init() {
