@@ -24,3 +24,5 @@ VMをStructで構成した場合, mutating func内のクロージャ（Firestore
 なのでクラスにする必要が出てきた。
 ViewのUpdatePracticeがある場合はそれぞれの値を初期値として渡す。onAppearでは再読み込みが走ってしまった。
 全てのVMはエラーの表示のためにDIが少なくとも必要じゃない？
+
+.sheetの使用の際に複数の遷移先というか、引数を渡すことはできない。

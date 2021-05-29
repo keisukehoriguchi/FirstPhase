@@ -38,7 +38,6 @@ struct OnePracticeView: View {
         .cornerRadius(15)
         .shadow(radius: 5)
     }
-    
 }
 
 struct OnePracticeView_Previews: PreviewProvider {

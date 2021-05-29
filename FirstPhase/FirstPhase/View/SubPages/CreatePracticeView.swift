@@ -21,79 +21,83 @@ struct CreatePracticeView: View {
     @State var updatePractice:Practice?
     
     var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    TextField("実践すること", text: $practiceName)
-                    Picker(selection: $category, label: Text("カテゴリー:"), content: {
-                        ForEach(PracticeCategory.allCases, id: \.self) { (category) in
-                            Text(category.rawValue).tag(category)
-                        }
-                    })
-                    Toggle("勉強ではなく実践のTraining", isOn: $isPractice)
-                    Toggle("リマインダーを設定する", isOn: $reminderIsOn)
-                    DatePicker("Date", selection: $reminderDate, displayedComponents: .hourAndMinute)
-                    
-                }
-                
-                
-                HStack(alignment: .center) {
-                    Button(action: {
-//                        self.presentationMode.wrappedValue.dismiss()
-                        print("cancel押された！")
-                    }) {
-                        Text("Cancel")
-//                            .frame(width: 100, height: 40, alignment: .center)
-//                            .overlay(
-//                                RoundedRectangle(cornerRadius: 10)
-//                                    .stroke(Color.blue, lineWidth: 1))
+        VStack {
+            NavigationView {
+                Form {
+                    Section {
+                        TextField("実践すること", text: $practiceName)
+                        Picker(selection: $category, label: Text("カテゴリー:"), content: {
+                            ForEach(PracticeCategory.allCases, id: \.self) { (category) in
+                                Text(category.rawValue).tag(category)
+                            }
+                        })
+                        Toggle("勉強ではなく実践のTraining", isOn: $isPractice)
+                        Toggle("リマインダーを設定する", isOn: $reminderIsOn)
+                        DatePicker("Date", selection: $reminderDate, displayedComponents: .hourAndMinute)
+                        
                     }
-                    Divider()
-                    Spacer()
-                    Divider()
-//                    if let practice = updatePractice {
-//                        Button(action: {
-//                            if practiceName == "" {
-//                                showBlankAlert = true
-//                            } else {
-//                                practiceViewModel.updatePractice(practice: Practice(practiceId: practice.practiceId, name: practiceName, practiceCategory: category, isPractice: false, needsReminder: false))
-//                            }
-//                        }) {
-//                            Text("Update")
-//                                .frame(width: 100, height: 40, alignment: .center)
-//                                .overlay(
-//                                    RoundedRectangle(cornerRadius: 10)
-//                                        .stroke(Color.blue, lineWidth: 1)
-//                                )
-//                        }
-//                        .alert(isPresented: $showBlankAlert) {
-//                            Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
-//                        }
-//
-//                    } else {
-                        Button(action: {
-//                            if practiceName == "" {
-//                                showBlankAlert = true
-//                            } else {
-//                                practiceViewModel.addPractice(title: practiceName, category: category, isPractice: isPractice, needReminder: reminderIsOn)
-//                            }
-                            print("Add押された！")
-                        }) {
-                            Text("Add")
-//                                .frame(width: 100, height: 40, alignment: .center)
-//                                .overlay(
-//                                    RoundedRectangle(cornerRadius: 10)
-//                                        .stroke(Color.blue, lineWidth: 1)
-//                                )
-                        }
-//                        .alert(isPresented: $showBlankAlert) {
-//                            Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
-//                        }
-//                    }
                 }
-                
+                .navigationTitle("実践を登録する")
             }
-            .navigationTitle("実践を登録する")
+            
+            HStack(alignment: .center) {
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                    print("cancel押された！")
+                }) {
+                    Text("Cancel")
+                        .frame(width: 100, height: 40, alignment: .center)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.blue, lineWidth: 1))
+                }
+                .padding()
+                
+                Spacer()
+                if let practice = updatePractice {
+                    Button(action: {
+                        if practiceName == "" {
+                            showBlankAlert = true
+                        } else {
+                            practiceViewModel.updatePractice(practice: Practice(practiceId: practice.practiceId, name: practiceName, practiceCategory: category, isPractice: false, needsReminder: false))
+                        }
+                    }) {
+                        Text("Update")
+                            .frame(width: 100, height: 40, alignment: .center)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue, lineWidth: 1)
+                            )
+                    }
+                    .padding()
+                    .alert(isPresented: $showBlankAlert) {
+                        Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
+                    }
+                    
+                } else {
+                    Button(action: {
+                        if practiceName == "" {
+                            showBlankAlert = true
+                        } else {
+                            practiceViewModel.addPractice(title: practiceName, category: category, isPractice: isPractice, needReminder: reminderIsOn)
+                        }
+                        print("Add押された！")
+                    }) {
+                        Text("Add")
+                            .frame(width: 100, height: 40, alignment: .center)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue, lineWidth: 1)
+                            )
+                    }
+                    .padding()
+                    .alert(isPresented: $showBlankAlert) {
+                        Alert(title: Text("実践するものとカテゴリーを入力してください"), message: nil, dismissButton: .default(Text("了解")))
+                    }
+                }
+            }
+            .frame(height: 60, alignment: .center)
+            
         }
     }
 }

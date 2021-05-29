@@ -16,14 +16,17 @@ struct PracticeView: View {
     var body: some View {
         VStack(spacing: 20) {
             ForEach(practiceViewModel.practices.indices, id: \.self) { index in
+                
                 Button(action: {
-                    self.isPresentedTweetPracticeView.toggle()
-                }, label: {
-                    OnePracticeView(practice: practiceViewModel.practices[index])
-                })
-                .sheet(isPresented: $isPresentedTweetPracticeView, content: {
-                    TweetPracticeView(practice: practiceViewModel.practices[index])
-                })
+                    isPresentedTweetPracticeView.toggle()
+                }) {
+//                    OnePracticeView(practice: practiceViewModel.practices[index])
+                    Text(practiceViewModel.practices[index].name)
+                        .sheet(isPresented: $isPresentedTweetPracticeView, content: {
+                            TweetPracticeView(practice: practiceViewModel.practices[index])
+                        })
+                }
+                
             }
             
             Button(action: {
