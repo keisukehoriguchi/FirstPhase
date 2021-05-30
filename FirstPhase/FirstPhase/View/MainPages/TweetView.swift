@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct TweetView: View {
+    
+    @EnvironmentObject var tweetViewModel: TweetViewModel
+    
     var body: some View {
+        ScrollView {
             VStack{
-                OneTweetView()
+                ForEach(tweetViewModel.tweets.indices, id: \.self) { index in
+                    OneTweetView(tweet: tweetViewModel.tweets[index])
+                }
             }
+        }
     }
 }
 
 struct TweetView_Previews: PreviewProvider {
     static var previews: some View {
-        TweetView()
+        TweetView().environmentObject(TweetViewModel())
     }
 }

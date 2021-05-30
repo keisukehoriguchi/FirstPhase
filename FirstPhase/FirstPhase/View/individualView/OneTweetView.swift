@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct OneTweetView: View {
+    
+    @State var tweet: Tweet
+    
     var body: some View {
         
         VStack(alignment: .leading) {
@@ -16,15 +19,18 @@ struct OneTweetView: View {
                     .resizable()
                     .frame(width: 40, height: 40, alignment: .center)
                 ///Practice
+                
                 Spacer()
                 HStack{
                     Image(systemName: "paintpalette")
                         .resizable()
                         .frame(width: 40, height: 40, alignment: .center)
                     VStack{
-                        Text("Practice1")
-                            .font(.title)
-                        Text("2.5 Hour")
+                        Text(tweet.practice.name)
+                            .font(.title2)
+                        Text(tweet.practice.practiceCategory.rawValue)
+                            .font(.title3)
+                        Text(tweet.duringTime)
                             .font(.title3)
                             .foregroundColor(.blue)
                     }
@@ -36,16 +42,16 @@ struct OneTweetView: View {
             }
             
             Text("Note:")
-            Text("aaaaaaaa")
+            Text(tweet.note)
                 .foregroundColor(.blue)
             
             HStack(alignment: .center){
                 Spacer()
                 Image(systemName: "bubble.left")
-                Text("1")
+                Text(String(tweet.comment.count))
                 Spacer()
                 Image(systemName: "heart")
-                Text("1")
+                Text(String(tweet.prefer.count))
                 Spacer()
             }
             .padding(5)
@@ -61,6 +67,6 @@ struct OneTweetView: View {
 
 struct TweetsView_Previews: PreviewProvider {
     static var previews: some View {
-        OneTweetView()
+        OneTweetView(tweet: tweet1)
     }
 }

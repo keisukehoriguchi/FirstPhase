@@ -50,8 +50,8 @@ let tweet1 = Tweet(
     user: user1,
     tweetId: UUID(),
     practice: practice1,
-    startDate: Date(),
-    finishDate: Date(),
+    startDate: Date(timeIntervalSince1970: 0),
+    finishDate: Date(timeIntervalSince1970: 3680),
     note: "がんばった",
     comment: [],
     prefer: []
@@ -61,8 +61,8 @@ let tweet2 = Tweet(
     user: user2,
     tweetId: UUID(),
     practice: practice2,
-    startDate: Date(),
-    finishDate: Date(),
+    startDate: Date(timeIntervalSince1970: 0),
+    finishDate: Date(timeIntervalSince1970: 9000),
     note: "いつもより頑張った",
     comment: [],
     prefer: []
@@ -72,8 +72,8 @@ let tweet2_1 = Tweet(
     user: user2,
     tweetId: tweet2.tweetId,
     practice: practice3,
-    startDate: Date(),
-    finishDate: Date(),
+    startDate: Date(timeIntervalSince1970: 100),
+    finishDate: Date(timeIntervalSince1970: 9000),
     note: "いつもよりは頑張ってなかった",
     comment: [],
     prefer: []
@@ -83,8 +83,8 @@ let tweet3 = Tweet(
     user: user1,
     tweetId: UUID(),
     practice: practice3,
-    startDate: Date(),
-    finishDate: Date(),
+    startDate: Date(timeIntervalSince1970: 0),
+    finishDate: Date(timeIntervalSince1970: 10000),
     note: "ウルトラソウル",
     comment: [],
     prefer: []
@@ -94,3 +94,20 @@ let comment1 = Comment(commentId: UUID(), message: "えらい")
 let comment2 = Comment(commentId: UUID(), message: "えらいっつ！")
 let comment2_1 = Comment(commentId: comment2.commentId, message: "Awesome!")
 let comment3 = Comment(commentId: UUID(), message: "えらいのか？")
+
+extension Date {
+    func autoCalculate(start: Date, finish: Date) -> String {
+        let interval = Int(finish.timeIntervalSince(start))
+        let hour = String(interval/3600)
+        let minute = String((interval%3600)/60)
+        var trainingTime: String
+        if hour != "0", minute != "0" {
+            trainingTime = hour + "時間" + minute + "分"
+        } else if hour != "0" {
+            trainingTime = hour + "時間"
+        } else {
+            trainingTime = minute + "分"
+        }
+        return trainingTime
+    }
+}

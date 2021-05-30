@@ -9,7 +9,8 @@ import Foundation
 
 class TweetViewModel: ObservableObject {
     private let tweetLogic = TweetLogic()
-    private var tweets: [Tweet] = []
+    var tweets: [Tweet] = [tweet1, tweet2, tweet3]
+    var selfTweet: [Tweet] = []
     
     func addTweet(user: User, practice: Practice, startDate: Date, finishDate: Date, note: String) {
         let newTweet = Tweet(user: user, tweetId: UUID(), practice: practice, startDate: startDate, finishDate: finishDate, note: note, comment: [], prefer: [])

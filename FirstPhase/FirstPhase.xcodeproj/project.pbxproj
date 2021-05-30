@@ -200,6 +200,7 @@
 				04633FB526479CD400BE576F /* FirstPhaseApp.swift */,
 				04A3103F2653A852008278CA /* AppDelegate.swift */,
 				04633FB726479CD400BE576F /* ContentView.swift */,
+				04AA219C264E718E003963D1 /* SampleData.swift */,
 				0489B59A264A1F5500BB0DD9 /* ViewModel */,
 				0489B599264A1F1400BB0DD9 /* Model */,
 				0497AA4F2649002E000082CE /* View */,
@@ -270,7 +271,6 @@
 				04AE2F8E2653743A00F0D945 /* Tweet.swift */,
 				04AE2F9226537BC100F0D945 /* Comment.swift */,
 				041A0DB4264B8D8900B92738 /* DateItem.swift */,
-				04AA219C264E718E003963D1 /* SampleData.swift */,
 				04AE2F8D265373F100F0D945 /* Logic */,
 			);
 			path = Model;
