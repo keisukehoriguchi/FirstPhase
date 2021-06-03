@@ -16,6 +16,7 @@ struct TweetView: View {
             VStack{
                 ForEach(tweetViewModel.tweets.indices, id: \.self) { index in
                     OneTweetView(tweet: tweetViewModel.tweets[index])
+                        .padding()
                 }
             }
         }

@@ -17,29 +17,39 @@ struct OneTweetView: View {
             HStack{
                 Image(systemName: "person.crop.circle")
                     .resizable()
+                    .frame(width: 40, height: 40, alignment: .top)
+                Text(tweet.user.name)
+            }
+            
+            HStack{
+                Image(systemName: "paintpalette")
+                    .resizable()
                     .frame(width: 40, height: 40, alignment: .center)
-                ///Practice
-                
                 Spacer()
-                HStack{
-                    Image(systemName: "paintpalette")
-                        .resizable()
-                        .frame(width: 40, height: 40, alignment: .center)
-                    VStack{
-                        Text(tweet.practice.name)
-                            .font(.title2)
+                VStack(alignment: .leading){
+                    Text(tweet.practice.name)
+                        .font(.title2)
+                    HStack{
                         Text(tweet.practice.practiceCategory.rawValue)
-                            .font(.title3)
-                        Text(tweet.duringTime)
-                            .font(.title3)
-                            .foregroundColor(.blue)
+                        Text("/")
+                        if tweet.practice.isPractice {
+                            Text("実践")
+                        } else {
+                            Text("勉強")
+                        }
                     }
+                    .font(.title3)
+                    
+                    Text(tweet.duringTime)
+                        .font(.title3)
+                        .foregroundColor(.blue)
                 }
-                .padding(.all, 5)
-                .background(Color(#colorLiteral(red: 0.934886694, green: 0.9293292165, blue: 0.9391586781, alpha: 1)))
-                .cornerRadius(15)
                 Spacer()
             }
+            .padding(.all, 5)
+            .background(Color(#colorLiteral(red: 0.934886694, green: 0.9293292165, blue: 0.9391586781, alpha: 1)))
+            .cornerRadius(15)
+            
             
             Text("Note:")
             Text(tweet.note)
