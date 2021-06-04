@@ -15,13 +15,17 @@ final class PracticeViewModel: ObservableObject {
     private let practiceLogic = PracticeLogic()
     var practices: [Practice] = [practice1, practice2] {
         didSet {
-            practicesBoolForPracticeView = []
+            tweetSheetBoolForPracticeView = []
+            updatePracticeBoolForPracticeView = []
             for _ in 0..<practices.count {
-                practicesBoolForPracticeView.append(false)
+                tweetSheetBoolForPracticeView.append(false)
+                updatePracticeBoolForPracticeView.append(false)
             }
         }
     }
-    @Published var practicesBoolForPracticeView: [Bool] = []
+    @Published var tweetSheetBoolForPracticeView: [Bool] = []
+    @Published var updatePracticeBoolForPracticeView: [Bool] = []
+    
     private var eventStore = EKEventStore()
     
     init() {

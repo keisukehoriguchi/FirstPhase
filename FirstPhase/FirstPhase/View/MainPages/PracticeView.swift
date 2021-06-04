@@ -12,22 +12,44 @@ struct PracticeView: View {
     @State var isPresentedTweetPracticeView: Bool = false
     @State var isPresentedCreatePracticeView: Bool = false
     @EnvironmentObject var practiceViewModel: PracticeViewModel
+    @State var isShowingAction: Bool = false
     
     var body: some View {
         
         VStack(spacing: 20) {
-            List {
+            
+            ForEach(practiceViewModel.practices.indices, id: \.self) { index in
                 
-                ForEach(practiceViewModel.practices.indices, id: \.self) { index in
+                HStack {
                     
                     Button(action: {
-                        practiceViewModel.practicesBoolForPracticeView[index].toggle()
+                        practiceViewModel.tweetSheetBoolForPracticeView[index].toggle()
                     }) {
                         OnePracticeView(practice: practiceViewModel.practices[index])
                     }
                     //Previewは有効じゃないけど実装時はうまくいく
-                    .sheet(isPresented: $practiceViewModel.practicesBoolForPracticeView[index], content: {
+                    .sheet(isPresented: $practiceViewModel.tweetSheetBoolForPracticeView[index], content: {
                         TweetPracticeView(practice: practiceViewModel.practices[index])
+                    })
+                    
+                    Button(action: {
+                        isShowingAction.toggle()
+                    }, label: {
+                        Text("Button")
+                    })
+                    .actionSheet(isPresented: $isShowingAction, content: {
+                        ActionSheet(title: Text("編集の操作を選んでください。"), message: Text("記録も同様に扱われます。"), buttons: [
+                            .default(Text("編集をします"), action: {
+                                practiceViewModel.updatePracticeBoolForPracticeView[index].toggle()
+                            }),
+                            .destructive(Text("削除をします"), action: {
+                                print("削除しました")
+                            }),
+                            .cancel()
+                        ])
+                    })
+                    .sheet(isPresented: $practiceViewModel.updatePracticeBoolForPracticeView[index], content: {
+                        CreatePracticeView(updatePractice: practiceViewModel.practices[index])
                     })
                     
                 }
