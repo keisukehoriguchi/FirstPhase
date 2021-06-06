@@ -13,7 +13,7 @@ import EventKit
 
 final class PracticeViewModel: ObservableObject {
     private let practiceLogic = PracticeLogic()
-    var practices: [Practice] = [practice1, practice2] {
+    @Published var practices: [Practice] = [practice1, practice2] {
         didSet {
             tweetSheetBoolForPracticeView = []
             updatePracticeBoolForPracticeView = []

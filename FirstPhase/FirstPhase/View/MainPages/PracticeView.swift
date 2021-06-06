@@ -27,10 +27,10 @@ struct PracticeView: View {
                     }) {
                         OnePracticeView(practice: practiceViewModel.practices[index])
                     }
-                    //Previewは有効じゃないけど実装時はうまくいく
-                    .sheet(isPresented: $practiceViewModel.tweetSheetBoolForPracticeView[index], content: {
-                        TweetPracticeView(practice: practiceViewModel.practices[index])
-                    })
+//                    //Previewは有効じゃないけど実装時はうまくいく
+//                    .sheet(isPresented: $practiceViewModel.tweetSheetBoolForPracticeView[index], content: {
+//                        TweetPracticeView(practice: practiceViewModel.practices[index])
+//                    })
                     
                     Button(action: {
                         isShowingAction.toggle()
@@ -43,14 +43,14 @@ struct PracticeView: View {
                                 practiceViewModel.updatePracticeBoolForPracticeView[index].toggle()
                             }),
                             .destructive(Text("削除をします"), action: {
-                                print("削除しました")
+                                practiceViewModel.deletePractice(practice: practiceViewModel.practices[index])
                             }),
                             .cancel()
                         ])
                     })
-                    .sheet(isPresented: $practiceViewModel.updatePracticeBoolForPracticeView[index], content: {
-                        CreatePracticeView(updatePractice: practiceViewModel.practices[index])
-                    })
+//                    .sheet(isPresented: $practiceViewModel.updatePracticeBoolForPracticeView[index], content: {
+//                        CreatePracticeView(updatePractice: practiceViewModel.practices[index])
+//                    })
                     
                 }
             }
