@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Tweet: Codable, Equatable {
+struct Tweet: Codable, Equatable, Identifiable {
     static func == (lhs: Tweet, rhs: Tweet) -> Bool {
-        lhs.tweetId == rhs.tweetId
+        lhs.id == rhs.id
     }
     
     var user: User
-    let tweetId: UUID
+    let id: UUID
     var practice: Practice
     var startDate: Date
     var finishDate: Date
@@ -33,7 +33,7 @@ struct Tweet: Codable, Equatable {
         prefer: [UUID]
     ) {
         self.user = user
-        self.tweetId = tweetId
+        self.id = tweetId
         self.practice = practice
         self.startDate = startDate
         self.finishDate = finishDate

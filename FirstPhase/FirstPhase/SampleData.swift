@@ -70,7 +70,7 @@ let tweet2 = Tweet(
 
 let tweet2_1 = Tweet(
     user: user2,
-    tweetId: tweet2.tweetId,
+    tweetId: tweet2.id,
     practice: practice3,
     startDate: Date(timeIntervalSince1970: 100),
     finishDate: Date(timeIntervalSince1970: 9000),

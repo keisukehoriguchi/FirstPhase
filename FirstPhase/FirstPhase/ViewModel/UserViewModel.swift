@@ -9,9 +9,10 @@ import Foundation
 
 class UserViewModel: ObservableObject {
     
-    private let userLogic = UserLogic()
     var user: User = User(id: UUID(), name: "", icon: "", profile: "")
     var interestedUser: User?
+    
+    private let userLogic = UserLogic()
     
     func addUser(userId: UUID) {
         userLogic.addUserToFirestore(userId: userId) { result in

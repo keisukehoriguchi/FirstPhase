@@ -15,8 +15,8 @@ struct TweetView: View {
         ScrollView{
             
             VStack{
-                ForEach(tweetViewModel.tweets.indices, id: \.self) { index in
-                    OneTweetView(tweet: tweetViewModel.tweets[index])
+                ForEach(tweetViewModel.tweets) { tweet in
+                    OneTweetView(tweet: tweet)
                         .padding()
                 }
             }
@@ -24,17 +24,8 @@ struct TweetView: View {
     }
 }
 
-//extension TweetView {
-//    .onDelete(perform: rowRemove(offsets:))
-//
-//
-//    func rowRemove(offsets: IndexSet) {
-//        tweetViewModel.tweets.remove(atOffsets: offsets)
-//    }
-//}
-
 struct TweetView_Previews: PreviewProvider {
     static var previews: some View {
-        TweetView().environmentObject(TweetViewModel())
+        TweetView().environmentObject(TweetViewModel()).environmentObject(UserViewModel())
     }
 }

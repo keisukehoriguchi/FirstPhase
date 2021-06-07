@@ -20,7 +20,7 @@ final class TweetLogicTests: XCTestCase {
         tweetLogic.tweetPath = "TweetTest"
         let db = Firestore.firestore()
 
-        let documentRef = db.collection(tweetLogic.tweetPath).document(tweet1.tweetId.uuidString)
+        let documentRef = db.collection(tweetLogic.tweetPath).document(tweet1.id.uuidString)
         do {
             try documentRef.setData(from: tweet1)
         } catch {

@@ -15,6 +15,7 @@ struct TweetPracticeView: View {
     @State var startDate: Date = Date()
     @State var finishDate: Date = Date()
     @State var updateTweet: Tweet?
+    @State var changePickerStyle: Bool = false
     @EnvironmentObject var tweetViewModel: TweetViewModel
     @EnvironmentObject var userViewModel: UserViewModel
     
@@ -29,12 +30,29 @@ struct TweetPracticeView: View {
                     }
                     
                     Section(header: Text("情報を入力")) {
-                        DatePicker("開始時間", selection: $startDate)
-                        DatePicker("終了時間", selection: $finishDate)
+                        DatePicker("Start", selection: $startDate, displayedComponents: [.date, .hourAndMinute])
+                        VStack(alignment: .leading){
+                            if changePickerStyle {
+                                DatePicker("End", selection: $finishDate)
+                                .datePickerStyle(WheelDatePickerStyle())
+                                Button(action: {
+                                    changePickerStyle.toggle()
+                                }, label: {
+                                    Text("don't want to scroll")
+                                })
+                            } else {
+                                DatePicker("End", selection: $finishDate)
+                                Button(action: {
+                                    changePickerStyle.toggle()
+                                }, label: {
+                                    Text("want to scroll")
+                                })
+                            }
+                        }
                         HStack{
                             Spacer()
                             Text("実践時間:")
-                            Text("40分")
+                            Text(Date().autoCalculate(start: startDate, finish: finishDate))
                             Spacer()
                         }
                         VStack(spacing: 0){
@@ -70,6 +88,7 @@ struct TweetPracticeView: View {
                 if let tweet = updateTweet {
                     Button(action: {
                         tweetViewModel.updateTweet(tweet: tweet)
+                        self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Update")
                             .frame(width: 100, height: 40, alignment: .center)
@@ -82,6 +101,7 @@ struct TweetPracticeView: View {
                 } else {
                     Button(action: {
                         tweetViewModel.addTweet(user: userViewModel.user, practice: practice, startDate: startDate, finishDate: finishDate, note: note)
+                        self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Tweet")
                             .frame(width: 100, height: 40, alignment: .center)

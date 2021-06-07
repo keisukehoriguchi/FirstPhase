@@ -10,6 +10,10 @@ import SwiftUI
 struct OneTweetView: View {
     
     @State var tweet: Tweet
+    @State var willEditTweet: Bool = false
+    @State var willDeleteTweet: Bool = false
+    @EnvironmentObject var userViewModel: UserViewModel
+    @EnvironmentObject var tweetViewModel: TweetViewModel
     
     var body: some View {
         
@@ -19,6 +23,32 @@ struct OneTweetView: View {
                     .resizable()
                     .frame(width: 40, height: 40, alignment: .top)
                 Text(tweet.user.name)
+                
+                if tweet.user != userViewModel.user {
+                    Spacer()
+                    
+                    Button(action: {
+                        willEditTweet.toggle()
+                    }, label: {
+                        Text("Edit")
+                    })
+                    .foregroundColor(.blue)
+                    .sheet(isPresented: $willEditTweet, content: {
+                        TweetPracticeView(practice: tweet.practice, note: tweet.note, startDate: tweet.startDate, finishDate: tweet.finishDate, updateTweet: tweet)
+                    })
+                    
+                    Button(action: {
+                        willDeleteTweet.toggle()
+                    }, label: {
+                        Text("Delete")
+                    })
+                    .foregroundColor(.red)
+                    .alert(isPresented: $willDeleteTweet, content: {
+                        Alert(title: Text("このTweetを削除しますか？"), primaryButton: .destructive(Text("Delete"), action: {
+                            tweetViewModel.deleteTweet(tweet: tweet)
+                        }), secondaryButton: .cancel())
+                    })
+                }
             }
             
             HStack{
@@ -77,6 +107,6 @@ struct OneTweetView: View {
 
 struct TweetsView_Previews: PreviewProvider {
     static var previews: some View {
-        OneTweetView(tweet: tweet1)
+        OneTweetView(tweet: tweet1).environmentObject(UserViewModel()).environmentObject(TweetViewModel())
     }
 }

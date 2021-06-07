@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PracticeView: View {
+    @State var isPresentedCreatePracticeView: Bool = false
     @EnvironmentObject var practiceViewModel: PracticeViewModel
     
     var body: some View {
@@ -16,6 +17,16 @@ struct PracticeView: View {
                 ForEach(practiceViewModel.practices) { practice in
                     OnePracticeView(practice: practice)
                 }
+                
+                Button(action: {
+                    self.isPresentedCreatePracticeView.toggle()
+                }, label: {
+                    Label("Add Another Practice", systemImage: "plus")
+                        .padding()
+                })
+                .sheet(isPresented: $isPresentedCreatePracticeView, content: {
+                    CreatePracticeView()
+                })
             }
         }
     }

@@ -9,7 +9,7 @@ import Foundation
 
 class CommentViewModel: ObservableObject {
     private let commentLogic = CommentLogic()
-    private var comments: [Comment] = []
+    var comments: [Comment] = []
     
     func addComment(message: String) {
         let comment = Comment(commentId: UUID(), message: message)
