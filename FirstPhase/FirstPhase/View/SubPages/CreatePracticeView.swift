@@ -53,6 +53,8 @@ struct CreatePracticeView: View {
                 .padding()
                 
                 Spacer()
+                
+                
                 if let practice = updatePractice {
                     Button(action: {
                         if practiceName == "" {

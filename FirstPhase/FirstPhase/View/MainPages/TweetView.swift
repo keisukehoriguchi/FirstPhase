@@ -12,10 +12,13 @@ struct TweetView: View {
     @EnvironmentObject var tweetViewModel: TweetViewModel
     
     var body: some View {
-        VStack{
-            ForEach(tweetViewModel.tweets.indices, id: \.self) { index in
-                OneTweetView(tweet: tweetViewModel.tweets[index])
-                    .padding()
+        ScrollView{
+            
+            VStack{
+                ForEach(tweetViewModel.tweets.indices, id: \.self) { index in
+                    OneTweetView(tweet: tweetViewModel.tweets[index])
+                        .padding()
+                }
             }
         }
     }

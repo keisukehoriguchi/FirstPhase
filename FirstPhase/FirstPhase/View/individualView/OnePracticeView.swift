@@ -68,7 +68,7 @@ struct OnePracticeView: View {
                 ])
             })
             .sheet(isPresented: $willUpdatePractice, content: {
-                CreatePracticeView(updatePractice: practice)
+                CreatePracticeView(practiceName: practice.name, category: practice.practiceCategory, isPractice: practice.isPractice, reminderIsOn: practice.needsReminder, updatePractice: practice)
             })
         }
     }
