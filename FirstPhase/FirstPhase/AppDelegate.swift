@@ -26,7 +26,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             
         }
         UserDefaults.standard.set(UserDefaults.standard.integer(forKey: Key().countKey) + 1, forKey: Key().countKey)
-        
+
         return true
     }
 }

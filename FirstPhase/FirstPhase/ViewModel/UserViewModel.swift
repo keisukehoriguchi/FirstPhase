@@ -45,7 +45,7 @@ class UserViewModel: ObservableObject {
     }
     
     func fetchUser(userId: UUID) {
-        userLogic.fetchPracticesFromFirestore { result in
+        userLogic.fetchPracticesFromFirestore(userId: userId) { result in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
@@ -56,7 +56,7 @@ class UserViewModel: ObservableObject {
     }
     
     func fetchInterestedUser(userId: UUID) {
-        userLogic.fetchPracticesFromFirestore { result in
+        userLogic.fetchPracticesFromFirestore(userId: userId) { result in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)
