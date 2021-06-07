@@ -15,3 +15,7 @@ enum FirestoreResultError: Error {
     case other
 }
 
+struct Key {
+    let countKey = "startUpCount"
+    let userKey = "userId"
+}

@@ -14,18 +14,6 @@ final class PracticeViewModel: ObservableObject {
     
     private let practiceLogic = PracticeLogic()
     @Published var practices: [Practice] = [practice1, practice2]
-//    {
-//        didSet {
-//            tweetSheetBoolForPracticeView = []
-//            updatePracticeBoolForPracticeView = []
-//            for _ in 0..<practices.count {
-//                tweetSheetBoolForPracticeView.append(false)
-//                updatePracticeBoolForPracticeView.append(false)
-//            }
-//        }
-//    }
-//    @Published var tweetSheetBoolForPracticeView: [Bool] = []
-//    @Published var updatePracticeBoolForPracticeView: [Bool] = []
     
     private var eventStore = EKEventStore()
     

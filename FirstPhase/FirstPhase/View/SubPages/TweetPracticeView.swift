@@ -66,6 +66,8 @@ struct TweetPracticeView: View {
                         }
                     }
                     
+                    //7DC08150-A829-406D-A76A-6DC6044A3C38
+                    
                 }
                 .navigationTitle("実践を記録する")
             }

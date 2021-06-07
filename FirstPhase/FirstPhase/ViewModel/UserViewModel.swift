@@ -14,6 +14,14 @@ class UserViewModel: ObservableObject {
     
     private let userLogic = UserLogic()
     
+    
+    init() {
+        guard let uuidString = UserDefaults.standard.string(forKey: Key().userKey) else { return }
+        guard let uuid = UUID(uuidString: uuidString) else { return }
+        fetchUser(userId: uuid)
+    }
+    
+    
     func addUser(userId: UUID) {
         userLogic.addUserToFirestore(userId: userId) { result in
             switch result {
