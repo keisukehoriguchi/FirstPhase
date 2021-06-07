@@ -58,7 +58,7 @@ struct CreatePracticeView: View {
                         if practiceName == "" {
                             showBlankAlert = true
                         } else {
-                            practiceViewModel.updatePractice(practice: Practice(practiceId: practice.practiceId, name: practiceName, practiceCategory: category, isPractice: false, needsReminder: false))
+                            practiceViewModel.updatePractice(practice: Practice(id: practice.id, name: practiceName, practiceCategory: category, isPractice: false, needsReminder: false))
                             self.presentationMode.wrappedValue.dismiss()
                         }
                     }) {

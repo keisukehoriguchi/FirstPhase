@@ -12,7 +12,7 @@ let user2_1 = User(id: user2.id, name: "orejanai", icon: "", profile: "Ah-真夏
 let user3 = User(id: UUID(), name: "charhan", icon: "", profile: "Hello!")
 
 let practice1 = Practice(
-    practiceId: UUID(),
+    id: UUID(),
     name: "毎日30分曲作り進める",
     practiceCategory: .musicCreation,
     isPractice: true,
@@ -21,7 +21,7 @@ let practice1 = Practice(
 )
 
 let practice2 = Practice(
-    practiceId: UUID(),
+    id: UUID(),
     name: "絵の制作動画見る",
     practiceCategory: .illustrationCreation,
     isPractice: false,
@@ -30,7 +30,7 @@ let practice2 = Practice(
 )
 
 let practice2_1 = Practice(
-    practiceId: practice2.practiceId,
+    id: practice2.id,
     name: "絵の制作をする",
     practiceCategory: .appProgramCreation,
     isPractice: true,
@@ -38,7 +38,7 @@ let practice2_1 = Practice(
 )
 
 let practice3 = Practice(
-    practiceId: UUID(),
+    id: UUID(),
     name: "アクセサリー作り",
     practiceCategory: .accyClothDIY,
     isPractice: true,

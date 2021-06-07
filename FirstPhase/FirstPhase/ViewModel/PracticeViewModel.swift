@@ -33,7 +33,7 @@ final class PracticeViewModel: ObservableObject {
     }
     
     func addPractice(title: String, category: PracticeCategory, isPractice: Bool, needReminder: Bool) {
-        let newPractice = Practice(practiceId: UUID(), name: title, practiceCategory: category, isPractice: isPractice, needsReminder: needReminder)
+        let newPractice = Practice(id: UUID(), name: title, practiceCategory: category, isPractice: isPractice, needsReminder: needReminder)
         practiceLogic.addPracticeToFirestore(practice: newPractice) { result in
             switch result {
             case .failure(let error):

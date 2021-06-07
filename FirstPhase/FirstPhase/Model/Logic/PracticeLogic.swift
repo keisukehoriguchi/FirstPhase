@@ -18,7 +18,7 @@ struct PracticeLogic{
     
     func addPracticeToFirestore(practice: Practice, _ handler: @escaping FirestoreResultHandler<[Practice]>) {
         var practices:[Practice] = []
-        let documentRef = db.collection(practicePath).document(practice.practiceId.uuidString)
+        let documentRef = db.collection(practicePath).document(practice.id.uuidString)
         do {
             try documentRef.setData(from: practice)
         } catch let error {
@@ -35,7 +35,7 @@ struct PracticeLogic{
                     return try? Firestore.Decoder().decode(Practice.self, from: document.data())
                 }
                 practices.append(contentsOf: practice ?? [])
-                practices.sort { $0.practiceId.uuidString > $1.practiceId.uuidString }
+                practices.sort { $0.id.uuidString > $1.id.uuidString }
                 handler(.success(practices))
             }
         }
@@ -43,7 +43,7 @@ struct PracticeLogic{
     
     func deletePracticeFromFirestore(practice: Practice, _ handler: @escaping FirestoreResultHandler<[Practice]>) {
         var practices:[Practice] = []
-        db.collection(practicePath).document(practice.practiceId.uuidString).delete()
+        db.collection(practicePath).document(practice.id.uuidString).delete()
         
         db.collection(practicePath).getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -54,7 +54,7 @@ struct PracticeLogic{
                     return try? Firestore.Decoder().decode(Practice.self, from: document.data())
                 }
                 practices.append(contentsOf: practice ?? [])
-                practices.sort { $0.practiceId.uuidString > $1.practiceId.uuidString }
+                practices.sort { $0.id.uuidString > $1.id.uuidString }
                 handler(.success(practices))
             }
         }
@@ -62,7 +62,7 @@ struct PracticeLogic{
     
     func updatePracticeToFirestore(practice: Practice, _ handler: @escaping FirestoreResultHandler<[Practice]>) {
         var practices:[Practice] = []
-        let documentRef = db.collection(practicePath).document(practice.practiceId.uuidString)
+        let documentRef = db.collection(practicePath).document(practice.id.uuidString)
         do {
             try documentRef.setData(from: practice, merge: true)
         } catch let error {
@@ -79,7 +79,7 @@ struct PracticeLogic{
                     return try? Firestore.Decoder().decode(Practice.self, from: document.data())
                 }
                 practices.append(contentsOf: practice ?? [])
-                practices.sort { $0.practiceId.uuidString > $1.practiceId.uuidString }
+                practices.sort { $0.id.uuidString > $1.id.uuidString }
                 handler(.success(practices))
             }
         }
@@ -96,7 +96,7 @@ struct PracticeLogic{
                     return try? Firestore.Decoder().decode(Practice.self, from: document.data())
                 }
                 practices.append(contentsOf: practice ?? [])
-                practices.sort { $0.practiceId.uuidString > $1.practiceId.uuidString }
+                practices.sort { $0.id.uuidString > $1.id.uuidString }
                 handler(.success(practices))
             }
         }

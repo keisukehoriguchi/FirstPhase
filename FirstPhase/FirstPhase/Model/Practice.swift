@@ -8,8 +8,8 @@
 import Foundation
 import EventKit
 
-struct Practice: Codable, Equatable {
-    var practiceId: UUID
+struct Practice: Codable, Equatable, Identifiable {
+    var id: UUID
     var name: String
     var practiceCategory: PracticeCategory
     var isPractice: Bool
