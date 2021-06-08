@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		041A0DB5264B8D8900B92738 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A0DB4264B8D8900B92738 /* DateItem.swift */; };
+		04206212266F4F79002D43FC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206211266F4F79002D43FC /* ProfileView.swift */; };
 		0440D7D1265259EC009883E4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440D7D0265259EC009883E4 /* Utilities.swift */; };
 		04553EAB2650C1C6001CDA26 /* PracticeLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */; };
 		04553EAF2650D25C001CDA26 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		041A0DB4264B8D8900B92738 /* DateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
+		04206211266F4F79002D43FC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0440D7D0265259EC009883E4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLogic.swift; sourceTree = "<group>"; };
 		04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			children = (
 				0488F086264CCCAB00476C97 /* TweetPracticeView.swift */,
 				0488F084264CCC9000476C97 /* CreatePracticeView.swift */,
+				04206211266F4F79002D43FC /* ProfileView.swift */,
 			);
 			path = SubPages;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				0497AA4E26490001000082CE /* TweetView.swift in Sources */,
 				04A3103B2653952C008278CA /* UserLogic.swift in Sources */,
 				04C4F35E264A74BD0045C71F /* ResultCalendarViewParts.swift in Sources */,
+				04206212266F4F79002D43FC /* ProfileView.swift in Sources */,
 				0497AA4C2648FB30000082CE /* MainTabView.swift in Sources */,
 				0488F087264CCCAB00476C97 /* TweetPracticeView.swift in Sources */,
 				04A31039265394B7008278CA /* UserViewModel.swift in Sources */,

@@ -6,7 +6,7 @@
 //
 import Foundation
 
-let user1 = User(id: UUID(), name: "chiguri", icon: "", profile: "よろしく")
+let user1 = User(id: UUID(uuidString: "9864D719-505C-4AC8-8462-7A2F89DF6688")!, name: "chiguri", icon: "", profile: "よろしく")
 let user2 = User(id: UUID(), name: "oreore", icon: "", profile: "俺？俺、俺俺俺！")
 let user2_1 = User(id: user2.id, name: "orejanai", icon: "", profile: "Ah-真夏のーらららら！")
 let user3 = User(id: UUID(), name: "charhan", icon: "", profile: "Hello!")

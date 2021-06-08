@@ -12,4 +12,8 @@ struct User: Codable, Equatable {
     var name: String
     var icon: String
     var profile: String
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.id == rhs.id
+    }
 }

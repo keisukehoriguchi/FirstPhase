@@ -24,7 +24,7 @@ struct OneTweetView: View {
                     .frame(width: 40, height: 40, alignment: .top)
                 Text(tweet.user.name)
                 
-                if tweet.user != userViewModel.user {
+                if tweet.user == userViewModel.user {
                     Spacer()
                     
                     Button(action: {
@@ -108,5 +108,7 @@ struct OneTweetView: View {
 struct TweetsView_Previews: PreviewProvider {
     static var previews: some View {
         OneTweetView(tweet: tweet1).environmentObject(UserViewModel()).environmentObject(TweetViewModel())
+        
+        OneTweetView(tweet: tweet2).environmentObject(UserViewModel()).environmentObject(TweetViewModel())
     }
 }

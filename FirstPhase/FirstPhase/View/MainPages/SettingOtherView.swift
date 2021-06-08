@@ -8,24 +8,43 @@
 import SwiftUI
 
 struct SettingOtherView: View {
+    
+    @State var isShowingProfile: Bool = false
+    @EnvironmentObject var userViewModel: UserViewModel
+    
     var body: some View {
-        List {
-            Section(header: Text("Setting")) {
-                Label("Profile", systemImage: "")
-                Label("Profile", systemImage: "")
+        NavigationView {
+            VStack{
+                NavigationLink(
+                    destination: Text("Destination"),
+                    isActive: $isShowingProfile,
+                    label: {
+                        Label("Profile", systemImage: "person.crop.circle")
+                    })
+                
+                List {
+                    
+                    Section(header: Text("Setting")) {
+                        Label("Profile", systemImage: "person.crop.circle")
+                        Label("Profile", systemImage: "")
+                    }
+                    
+                    
+                    Section(header: Text("Other")) {
+                        Label("Profile", systemImage: "")
+                        Label("Profile", systemImage: "")
+                    }
+                    
+                }
             }
-            
-            Section(header: Text("Other")) {
-                Label("Profile", systemImage: "")
-                Label("Profile", systemImage: "")
-            }
-            
         }
     }
+    
 }
+
 
 struct SettingOtherView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingOtherView()
+        SettingOtherView().environmentObject(UserViewModel())
     }
 }
