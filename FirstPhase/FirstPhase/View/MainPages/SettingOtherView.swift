@@ -16,7 +16,7 @@ struct SettingOtherView: View {
         NavigationView {
             VStack{
                 NavigationLink(
-                    destination: Text("Destination"),
+                    destination: ProfileView(),
                     isActive: $isShowingProfile,
                     label: {
                         Label("Profile", systemImage: "person.crop.circle")

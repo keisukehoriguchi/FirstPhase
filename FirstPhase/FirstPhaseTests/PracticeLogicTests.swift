@@ -19,7 +19,7 @@ final class PracticeLogicTests: XCTestCase {
         practiceLogic.practicePath = "PracticeTest"
         let db = Firestore.firestore()
 
-        let documentRef = db.collection(practiceLogic.practicePath).document(practice1.practiceId.uuidString)
+        let documentRef = db.collection(practiceLogic.practicePath).document(practice1.id.uuidString)
         do {
             try documentRef.setData(from: practice1)
         } catch {

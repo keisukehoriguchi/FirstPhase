@@ -16,7 +16,7 @@ struct ProfileView: View {
     @State var follower: [UUID] = []
     @State var generation: String = "20-30"
     @State var occupation: String = ""
-    @State var target: [String] = []
+    @State var target: [PracticeCategory] = []
     
     @EnvironmentObject var userViewModel: UserViewModel
     
@@ -54,23 +54,22 @@ struct ProfileView: View {
                             .foregroundColor(.gray)
                         TextField("", text: $occupation)
                     }
-                    HStack{
+                    VStack(alignment: .leading){
                         Text("目標:")
                             .foregroundColor(.gray)
-                        Picker("目標", selection: $target) {
-                            Text("").tag("Tag")
-                        }
+                        SelectionsButton().frame(width: 300, height: 200, alignment: .center)
                     }
+                    
                 }
-                Section(header: Text("自己紹介")) {
+                
+                Section(header:
+                            Text("自己紹介")
+                ) {
                     TextEditor(text: $profile)
                         .lineLimit(10)
                 }
-                
             }
         }
-        
-        
     }
 }
 
