@@ -9,7 +9,7 @@ import Foundation
 
 class TweetViewModel: ObservableObject {
     @Published var tweets: [Tweet] = [tweet1, tweet2, tweet3]
-    @Published var selfTweet: [Tweet] = []
+    @Published var someoneTweets: [Tweet] = []
     
     private let tweetLogic = TweetLogic()
     

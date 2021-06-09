@@ -110,4 +110,12 @@ extension Date {
         }
         return trainingTime
     }
+    
+    func calculate(start: Date, finish: Date) -> [Int] {
+        let interval = Int(finish.timeIntervalSince(start))
+        let hour = Int(interval/3600)
+        let minute = Int((interval%3600)/60)
+        let trainingTime: [Int] = [hour, minute]
+        return trainingTime
+    }
 }

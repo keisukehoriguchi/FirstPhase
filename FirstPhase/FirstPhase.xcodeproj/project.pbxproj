@@ -39,6 +39,7 @@
 		0498713E26705A550001655A /* QuestionsAndOpinions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498713D26705A550001655A /* QuestionsAndOpinions.swift */; };
 		0498714026705DC60001655A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498713F26705DC50001655A /* WebView.swift */; };
 		04987142267062920001655A /* StoreReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04987141267062920001655A /* StoreReviewView.swift */; };
+		0498E693267098E20040407B /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498E692267098E20040407B /* ResultViewModel.swift */; };
 		049DD311266F89EB0071480E /* SelectionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DD310266F89EB0071480E /* SelectionsButton.swift */; };
 		049DD313266F8AAE0071480E /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */; };
 		049F23A72660C26B00835D1B /* CommentLogicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F23A62660C26B00835D1B /* CommentLogicTest.swift */; };
@@ -118,6 +119,7 @@
 		0498713D26705A550001655A /* QuestionsAndOpinions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAndOpinions.swift; sourceTree = "<group>"; };
 		0498713F26705DC50001655A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		04987141267062920001655A /* StoreReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewView.swift; sourceTree = "<group>"; };
+		0498E692267098E20040407B /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		049DD310266F89EB0071480E /* SelectionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionsButton.swift; sourceTree = "<group>"; };
 		049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
 		049F23A62660C26B00835D1B /* CommentLogicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLogicTest.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */,
 				04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */,
 				04AE2F9426537FEA00F0D945 /* TweetViewModel.swift */,
+				0498E692267098E20040407B /* ResultViewModel.swift */,
 				04985D3B26564C980006C5E5 /* CommentViewModel.swift */,
 				04A31038265394B7008278CA /* UserViewModel.swift */,
 			);
@@ -614,6 +617,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A310402653A852008278CA /* AppDelegate.swift in Sources */,
+				0498E693267098E20040407B /* ResultViewModel.swift in Sources */,
 				0498714026705DC60001655A /* WebView.swift in Sources */,
 				04C4F360264A7D070045C71F /* CalendarLogic.swift in Sources */,
 				04AE2F9526537FEA00F0D945 /* TweetViewModel.swift in Sources */,
