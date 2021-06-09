@@ -36,6 +36,9 @@
 		0497AA552649006B000082CE /* SettingOtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497AA542649006B000082CE /* SettingOtherView.swift */; };
 		04985D3C26564C980006C5E5 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3B26564C980006C5E5 /* CommentViewModel.swift */; };
 		04985D3E26564D2C0006C5E5 /* CommentLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3D26564D2C0006C5E5 /* CommentLogic.swift */; };
+		0498713E26705A550001655A /* QuestionsAndOpinions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498713D26705A550001655A /* QuestionsAndOpinions.swift */; };
+		0498714026705DC60001655A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498713F26705DC50001655A /* WebView.swift */; };
+		04987142267062920001655A /* StoreReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04987141267062920001655A /* StoreReviewView.swift */; };
 		049DD311266F89EB0071480E /* SelectionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DD310266F89EB0071480E /* SelectionsButton.swift */; };
 		049DD313266F8AAE0071480E /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */; };
 		049F23A72660C26B00835D1B /* CommentLogicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F23A62660C26B00835D1B /* CommentLogicTest.swift */; };
@@ -112,6 +115,9 @@
 		0497AA542649006B000082CE /* SettingOtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOtherView.swift; sourceTree = "<group>"; };
 		04985D3B26564C980006C5E5 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		04985D3D26564D2C0006C5E5 /* CommentLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLogic.swift; sourceTree = "<group>"; };
+		0498713D26705A550001655A /* QuestionsAndOpinions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAndOpinions.swift; sourceTree = "<group>"; };
+		0498713F26705DC50001655A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		04987141267062920001655A /* StoreReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewView.swift; sourceTree = "<group>"; };
 		049DD310266F89EB0071480E /* SelectionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionsButton.swift; sourceTree = "<group>"; };
 		049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
 		049F23A62660C26B00835D1B /* CommentLogicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLogicTest.swift; sourceTree = "<group>"; };
@@ -265,6 +271,7 @@
 			children = (
 				0488F086264CCCAB00476C97 /* TweetPracticeView.swift */,
 				0488F084264CCC9000476C97 /* CreatePracticeView.swift */,
+				0498713D26705A550001655A /* QuestionsAndOpinions.swift */,
 				04206211266F4F79002D43FC /* ProfileView.swift */,
 			);
 			path = SubPages;
@@ -299,11 +306,13 @@
 			isa = PBXGroup;
 			children = (
 				0489B5A0264A25A300BB0DD9 /* ResultGraphViewParts.swift */,
+				04987141267062920001655A /* StoreReviewView.swift */,
 				04C4F35D264A74BD0045C71F /* ResultCalendarViewParts.swift */,
 				0488F07E264CBAC800476C97 /* WeekCalendarViewParts.swift */,
 				0488F080264CC31100476C97 /* DayCalendarViewParts.swift */,
 				049DD310266F89EB0071480E /* SelectionsButton.swift */,
 				049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */,
+				0498713F26705DC50001655A /* WebView.swift */,
 			);
 			path = ViewParts;
 			sourceTree = "<group>";
@@ -605,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A310402653A852008278CA /* AppDelegate.swift in Sources */,
+				0498714026705DC60001655A /* WebView.swift in Sources */,
 				04C4F360264A7D070045C71F /* CalendarLogic.swift in Sources */,
 				04AE2F9526537FEA00F0D945 /* TweetViewModel.swift in Sources */,
 				04553EAF2650D25C001CDA26 /* PracticeViewModel.swift in Sources */,
@@ -615,6 +625,7 @@
 				04AE2F91265379E800F0D945 /* User.swift in Sources */,
 				04AE2F8F2653743A00F0D945 /* Tweet.swift in Sources */,
 				0497AA5126490050000082CE /* PracticeView.swift in Sources */,
+				0498713E26705A550001655A /* QuestionsAndOpinions.swift in Sources */,
 				04AE2F972653801900F0D945 /* TweetLogic.swift in Sources */,
 				04985D3E26564D2C0006C5E5 /* CommentLogic.swift in Sources */,
 				0474A59D264923A700D98E8E /* OneTweetView.swift in Sources */,
@@ -629,6 +640,7 @@
 				04553EAB2650C1C6001CDA26 /* PracticeLogic.swift in Sources */,
 				04A2431F264BBA6400F4C566 /* CalendarViewModel.swift in Sources */,
 				0488F081264CC31100476C97 /* DayCalendarViewParts.swift in Sources */,
+				04987142267062920001655A /* StoreReviewView.swift in Sources */,
 				0497AA552649006B000082CE /* SettingOtherView.swift in Sources */,
 				0489B59C264A23A800BB0DD9 /* ResultByGraph.swift in Sources */,
 				0497AA4E26490001000082CE /* TweetView.swift in Sources */,

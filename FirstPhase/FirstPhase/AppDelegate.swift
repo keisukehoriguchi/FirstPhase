@@ -22,9 +22,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             UserDefaults.standard.set(newUser.id.uuidString, forKey: Key().userKey)
             userViewModel.addUser(userId: newUser.id)
             
-        } else if UserDefaults.standard.integer(forKey: Key().countKey) == 20 {
-            
         }
+        
+        StoreReviewView().checkAndShowReview()
         UserDefaults.standard.set(UserDefaults.standard.integer(forKey: Key().countKey) + 1, forKey: Key().countKey)
 
         return true

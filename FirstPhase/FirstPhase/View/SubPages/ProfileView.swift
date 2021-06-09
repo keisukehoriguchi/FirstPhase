@@ -17,7 +17,7 @@ struct ProfileView: View {
     @State var generation: String = "20-30"
     @State var occupation: String = ""
     @State var target: [PracticeCategory] = []
-    
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var userViewModel: UserViewModel
     
     var body: some View {
@@ -69,6 +69,14 @@ struct ProfileView: View {
                         .lineLimit(10)
                 }
             }
+            Button(action: {
+                let updated = User(id: userViewModel.user.id, name: name, icon: icon, profile: profile)
+                userViewModel.updateUser(user: updated)
+                self.presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Update")
+            })
+            .padding()
         }
     }
 }
