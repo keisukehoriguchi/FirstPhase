@@ -298,9 +298,9 @@
 				04A2431E264BBA6400F4C566 /* CalendarViewModel.swift */,
 				04553EAE2650D25C001CDA26 /* PracticeViewModel.swift */,
 				04AE2F9426537FEA00F0D945 /* TweetViewModel.swift */,
-				0498E692267098E20040407B /* ResultViewModel.swift */,
 				04985D3B26564C980006C5E5 /* CommentViewModel.swift */,
 				04A31038265394B7008278CA /* UserViewModel.swift */,
+				0498E692267098E20040407B /* ResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
