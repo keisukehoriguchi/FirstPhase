@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResultByCalendar: View {
+    
     var body: some View {
         ResultCalendarViewParts()
     }
@@ -15,6 +16,6 @@ struct ResultByCalendar: View {
 
 struct ResultByCalendar_Previews: PreviewProvider {
     static var previews: some View {
-        ResultByCalendar()
+        ResultByCalendar().environmentObject(ResultViewModel(source: TweetViewModel().tweets))
     }
 }

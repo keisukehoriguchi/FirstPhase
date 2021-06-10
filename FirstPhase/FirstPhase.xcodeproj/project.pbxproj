@@ -40,6 +40,7 @@
 		0498714026705DC60001655A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498713F26705DC50001655A /* WebView.swift */; };
 		04987142267062920001655A /* StoreReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04987141267062920001655A /* StoreReviewView.swift */; };
 		0498E693267098E20040407B /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498E692267098E20040407B /* ResultViewModel.swift */; };
+		04998A142671DDF800FB73BF /* ResultLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04998A132671DDF700FB73BF /* ResultLogic.swift */; };
 		049DD311266F89EB0071480E /* SelectionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DD310266F89EB0071480E /* SelectionsButton.swift */; };
 		049DD313266F8AAE0071480E /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */; };
 		049F23A72660C26B00835D1B /* CommentLogicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F23A62660C26B00835D1B /* CommentLogicTest.swift */; };
@@ -120,6 +121,7 @@
 		0498713F26705DC50001655A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		04987141267062920001655A /* StoreReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewView.swift; sourceTree = "<group>"; };
 		0498E692267098E20040407B /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		04998A132671DDF700FB73BF /* ResultLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLogic.swift; sourceTree = "<group>"; };
 		049DD310266F89EB0071480E /* SelectionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionsButton.swift; sourceTree = "<group>"; };
 		049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
 		049F23A62660C26B00835D1B /* CommentLogicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentLogicTest.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				04553EAA2650C1C6001CDA26 /* PracticeLogic.swift */,
 				04AE2F962653801900F0D945 /* TweetLogic.swift */,
 				04985D3D26564D2C0006C5E5 /* CommentLogic.swift */,
+				04998A132671DDF700FB73BF /* ResultLogic.swift */,
 				04A3103A2653952C008278CA /* UserLogic.swift */,
 			);
 			path = Logic;
@@ -655,6 +658,7 @@
 				0488F087264CCCAB00476C97 /* TweetPracticeView.swift in Sources */,
 				04A31039265394B7008278CA /* UserViewModel.swift in Sources */,
 				04AA219D264E718E003963D1 /* SampleData.swift in Sources */,
+				04998A142671DDF800FB73BF /* ResultLogic.swift in Sources */,
 				041A0DB5264B8D8900B92738 /* DateItem.swift in Sources */,
 				0440D7D1265259EC009883E4 /* Utilities.swift in Sources */,
 				0497AA532649005D000082CE /* ResultView.swift in Sources */,

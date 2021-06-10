@@ -13,6 +13,7 @@ struct ContentView: View {
     @StateObject var tweetViewModel = TweetViewModel()
     @StateObject var commentViewModel = CommentViewModel()
     @StateObject var userViewModel = UserViewModel()
+    @StateObject var resultViewModel = ResultViewModel(source: [])
     
     var body: some View {
         MainTabView()
@@ -20,6 +21,7 @@ struct ContentView: View {
             .environmentObject(tweetViewModel)
             .environmentObject(commentViewModel)
             .environmentObject(userViewModel)
+            .environmentObject(resultViewModel)
     }
 }
 
