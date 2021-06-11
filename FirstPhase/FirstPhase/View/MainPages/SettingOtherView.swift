@@ -10,7 +10,6 @@ import SwiftUI
 struct SettingOtherView: View {
     
     @State var isShowAlert: Bool = false
-    @EnvironmentObject var userViewModel: UserViewModel
     
     var body: some View {
         NavigationView {
@@ -64,6 +63,6 @@ struct SettingOtherView: View {
 
 struct SettingOtherView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingOtherView().environmentObject(UserViewModel())
+        SettingOtherView()
     }
 }

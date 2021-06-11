@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ResultByGraph: View {
     
-    @EnvironmentObject var resultViewModel: ResultViewModel
+    @EnvironmentObject var tweetViewModel: TweetViewModel
     
     var body: some View {
-        ResultGraphViewParts(doubleArray: resultViewModel.someoneGraphArray)
+        ResultGraphViewParts(doubleArray: tweetViewModel.someoneGraphArray)
             .fill(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom))
             .shadow(color: .gray, radius: 5, x: 2.0, y: -10)
     }
@@ -21,6 +21,6 @@ struct ResultByGraph: View {
 struct ResultByGraph_Previews: PreviewProvider {
     
     static var previews: some View {
-        ResultByGraph().environmentObject(ResultViewModel(source: []))
+        ResultByGraph().environmentObject(TweetViewModel())
     }
 }

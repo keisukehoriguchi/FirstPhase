@@ -39,7 +39,6 @@
 		0498713E26705A550001655A /* QuestionsAndOpinions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498713D26705A550001655A /* QuestionsAndOpinions.swift */; };
 		0498714026705DC60001655A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498713F26705DC50001655A /* WebView.swift */; };
 		04987142267062920001655A /* StoreReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04987141267062920001655A /* StoreReviewView.swift */; };
-		0498E693267098E20040407B /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498E692267098E20040407B /* ResultViewModel.swift */; };
 		04998A142671DDF800FB73BF /* ResultLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04998A132671DDF700FB73BF /* ResultLogic.swift */; };
 		049DD311266F89EB0071480E /* SelectionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DD310266F89EB0071480E /* SelectionsButton.swift */; };
 		049DD313266F8AAE0071480E /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */; };
@@ -120,7 +119,6 @@
 		0498713D26705A550001655A /* QuestionsAndOpinions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsAndOpinions.swift; sourceTree = "<group>"; };
 		0498713F26705DC50001655A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		04987141267062920001655A /* StoreReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewView.swift; sourceTree = "<group>"; };
-		0498E692267098E20040407B /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		04998A132671DDF700FB73BF /* ResultLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLogic.swift; sourceTree = "<group>"; };
 		049DD310266F89EB0071480E /* SelectionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionsButton.swift; sourceTree = "<group>"; };
 		049DD312266F8AAE0071480E /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 				04AE2F9426537FEA00F0D945 /* TweetViewModel.swift */,
 				04985D3B26564C980006C5E5 /* CommentViewModel.swift */,
 				04A31038265394B7008278CA /* UserViewModel.swift */,
-				0498E692267098E20040407B /* ResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -620,7 +617,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A310402653A852008278CA /* AppDelegate.swift in Sources */,
-				0498E693267098E20040407B /* ResultViewModel.swift in Sources */,
 				0498714026705DC60001655A /* WebView.swift in Sources */,
 				04C4F360264A7D070045C71F /* CalendarLogic.swift in Sources */,
 				04AE2F9526537FEA00F0D945 /* TweetViewModel.swift in Sources */,

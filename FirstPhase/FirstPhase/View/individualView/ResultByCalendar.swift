@@ -16,6 +16,6 @@ struct ResultByCalendar: View {
 
 struct ResultByCalendar_Previews: PreviewProvider {
     static var previews: some View {
-        ResultByCalendar().environmentObject(ResultViewModel(source: TweetViewModel().tweets))
+        ResultByCalendar().environmentObject(TweetViewModel())
     }
 }

@@ -12,7 +12,6 @@ struct OneTweetView: View {
     @State var tweet: Tweet
     @State var willEditTweet: Bool = false
     @State var willDeleteTweet: Bool = false
-    @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var tweetViewModel: TweetViewModel
     
     var body: some View {
@@ -24,7 +23,7 @@ struct OneTweetView: View {
                     .frame(width: 40, height: 40, alignment: .top)
                 Text(tweet.user.name)
                 
-                if tweet.user == userViewModel.user {
+                if tweet.user == tweetViewModel.userViewModel.user {
                     Spacer()
                     
                     Button(action: {
@@ -107,8 +106,7 @@ struct OneTweetView: View {
 
 struct TweetsView_Previews: PreviewProvider {
     static var previews: some View {
-        OneTweetView(tweet: tweet1).environmentObject(UserViewModel()).environmentObject(TweetViewModel())
-        
-        OneTweetView(tweet: tweet2).environmentObject(UserViewModel()).environmentObject(TweetViewModel())
+        OneTweetView(tweet: tweet1).environmentObject(TweetViewModel())
+        OneTweetView(tweet: tweet2).environmentObject(TweetViewModel())
     }
 }

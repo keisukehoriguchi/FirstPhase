@@ -17,7 +17,6 @@ struct TweetPracticeView: View {
     @State var updateTweet: Tweet?
     @State var changePickerStyle: Bool = false
     @EnvironmentObject var tweetViewModel: TweetViewModel
-    @EnvironmentObject var userViewModel: UserViewModel
     
     var body: some View {
         VStack{
@@ -102,7 +101,7 @@ struct TweetPracticeView: View {
                     .padding()
                 } else {
                     Button(action: {
-                        tweetViewModel.addTweet(user: userViewModel.user, practice: practice, startDate: startDate, finishDate: finishDate, note: note)
+                        tweetViewModel.addTweet(user: tweetViewModel.userViewModel.user, practice: practice, startDate: startDate, finishDate: finishDate, note: note)
                         self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Tweet")

@@ -9,9 +9,8 @@ import Foundation
 
 class UserViewModel: ObservableObject {
     
-    var user: User = User(id: UUID(), name: "", icon: "", profile: "")
-    var interestedUser: User?
-    
+    @Published var user: User = User(id: UUID(), name: "", icon: "", profile: "")
+    @Published var interestedUser: User?
     private let userLogic = UserLogic()
     
     init() {

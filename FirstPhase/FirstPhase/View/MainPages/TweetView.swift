@@ -26,6 +26,6 @@ struct TweetView: View {
 
 struct TweetView_Previews: PreviewProvider {
     static var previews: some View {
-        TweetView().environmentObject(TweetViewModel()).environmentObject(UserViewModel())
+        TweetView().environmentObject(TweetViewModel())
     }
 }

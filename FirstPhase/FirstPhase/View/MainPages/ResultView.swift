@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResultView: View {
     var body: some View {
-        VStack {
+        VStack{
             ResultByGraph()
             ResultByCalendar()
         }
@@ -18,6 +18,6 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView()
+        ResultView().environmentObject(TweetViewModel())
     }
 }

@@ -18,7 +18,7 @@ struct ProfileView: View {
     @State var occupation: String = ""
     @State var target: [PracticeCategory] = []
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var userViewModel: UserViewModel
+    @EnvironmentObject var tweetViewModel: TweetViewModel
     
     var body: some View {
         VStack {
@@ -70,8 +70,8 @@ struct ProfileView: View {
                 }
             }
             Button(action: {
-                let updated = User(id: userViewModel.user.id, name: name, icon: icon, profile: profile)
-                userViewModel.updateUser(user: updated)
+                let updated = User(id: tweetViewModel.userViewModel.user.id, name: name, icon: icon, profile: profile)
+                tweetViewModel.userViewModel.updateUser(user: updated)
                 self.presentationMode.wrappedValue.dismiss()
             }, label: {
                 Text("Update")
@@ -83,6 +83,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView().environmentObject(UserViewModel())
+        ProfileView().environmentObject(TweetViewModel())
     }
 }

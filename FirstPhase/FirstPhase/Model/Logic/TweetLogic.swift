@@ -33,9 +33,7 @@ struct TweetLogic{
                     return try? Firestore.Decoder().decode(Tweet.self, from: document.data())
                 }
                 tweets.append(contentsOf: tweet ?? [])
-                
-                
-                tweets.sort { $0.id.uuidString > $1.id.uuidString }
+                tweets.sort { $0.startDate > $1.startDate }
                 handler(.success(tweets))
             }
         }
@@ -55,9 +53,7 @@ struct TweetLogic{
                     return try? Firestore.Decoder().decode(Tweet.self, from: document.data())
                 }
                 tweets.append(contentsOf: tweet ?? [])
-                
-                
-                tweets.sort { $0.id.uuidString > $1.id.uuidString }
+                tweets.sort { $0.startDate > $1.startDate }
                 handler(.success(tweets))
             }
         }
@@ -82,18 +78,16 @@ struct TweetLogic{
                     return try? Firestore.Decoder().decode(Tweet.self, from: document.data())
                 }
                 tweets.append(contentsOf: tweet ?? [])
-                
-                
-                tweets.sort { $0.id.uuidString > $1.id.uuidString }
+                tweets.sort { $0.startDate > $1.startDate }
                 handler(.success(tweets))
             }
         }
     }
     
-    func fetchTweetsFromFirestore( _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
+    func fetchTweetsFromFirestore(follow: [UUID], _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
         var tweets:[Tweet] = []
         //全体読み込み部分
-        db.collection(tweetPath).getDocuments() { (querySnapshot, err) in
+        db.collection(tweetPath).whereField("userId", in: follow ).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print(err.localizedDescription)
                 handler(.failure(.network))
@@ -102,12 +96,27 @@ struct TweetLogic{
                     return try? Firestore.Decoder().decode(Tweet.self, from: document.data())
                 }
                 tweets.append(contentsOf: tweet ?? [])
-                
-                
-                tweets.sort { $0.id.uuidString > $1.id.uuidString }
+                tweets.sort { $0.startDate > $1.startDate }
                 handler(.success(tweets))
             }
         }
     }
     
+    func fetchSomeoneTweetsFromFirestore(userId: UUID,  _ handler: @escaping FirestoreResultHandler<[Tweet]>) {
+        var tweets:[Tweet] = []
+        //全体読み込み部分
+        db.collection(tweetPath).whereField("userId", isEqualTo: userId).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print(err.localizedDescription)
+                handler(.failure(.network))
+            } else {
+                let tweet = querySnapshot?.documents.compactMap { document in
+                    return try? Firestore.Decoder().decode(Tweet.self, from: document.data())
+                }
+                tweets.append(contentsOf: tweet ?? [])
+                tweets.sort { $0.startDate > $1.startDate }
+                handler(.success(tweets))
+            }
+        }
+    }
 }

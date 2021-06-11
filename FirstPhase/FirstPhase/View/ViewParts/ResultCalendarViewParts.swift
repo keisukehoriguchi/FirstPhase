@@ -10,7 +10,7 @@ import SwiftUI
 struct ResultCalendarViewParts: View {
     
     private let dayOfWeekLabel = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-    @EnvironmentObject var resultViewModel:ResultViewModel
+    @EnvironmentObject var tweetViewModel:TweetViewModel
     
     var body: some View {
         GeometryReader { geometry in
@@ -25,8 +25,8 @@ struct ResultCalendarViewParts: View {
                     }
                 }
                 .frame(width: geometry.size.width)
-                ForEach(0..<(resultViewModel.calendarArray.count/7), id: \.self) { week in
-                    WeekCalendarViewParts(sundayDay: resultViewModel.calendarArray[7*week+0], mondayDay: resultViewModel.calendarArray[7*week+1], tuesdayDay: resultViewModel.calendarArray[7*week+2], wednesdayDay: resultViewModel.calendarArray[7*week+3], thursdayDay: resultViewModel.calendarArray[7*week+4], fridayDay: resultViewModel.calendarArray[7*week+5], saturdayDay: resultViewModel.calendarArray[7*week+6], check: true)
+                ForEach(0..<(tweetViewModel.calendarArray.count/7), id: \.self) { week in
+                    WeekCalendarViewParts(sundayDay: tweetViewModel.calendarArray[7*week+0], mondayDay: tweetViewModel.calendarArray[7*week+1], tuesdayDay: tweetViewModel.calendarArray[7*week+2], wednesdayDay: tweetViewModel.calendarArray[7*week+3], thursdayDay: tweetViewModel.calendarArray[7*week+4], fridayDay: tweetViewModel.calendarArray[7*week+5], saturdayDay: tweetViewModel.calendarArray[7*week+6], check: true)
                     }
             }
         }
@@ -36,6 +36,6 @@ struct ResultCalendarViewParts: View {
 
 struct ResultCalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultCalendarViewParts().environmentObject(ResultViewModel(source: TweetViewModel().tweets))
+        ResultCalendarViewParts().environmentObject(TweetViewModel())
     }
 }
